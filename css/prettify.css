@@ -1,0 +1,203 @@
+/**
+ * @license
+ * Copyright (C) 2015 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* Pretty printing styles. Used with prettify.js. */
+
+
+code.prettyprint { display: block; background-color: #222 }
+code.prettyprint { overflow-x: scroll }
+code .nocode { background-color: none; color: #000 }
+code .str { color: #ffa0a0 } /* string  - pink */
+code .kwd { color: #f0e68c; /*font-weight: bold*/ }
+code .com { color: #87ceeb } /* comment - skyblue */
+code .typ { color: #98fb98 } /* type    - lightgreen */
+code .lit { color: #cd5c5c } /* literal - darkred */
+code .pun { color: #f0e68c }    /* punctuation */
+code .pln { color: #d1d1ff }    /* plaintext */
+code .tag { color: #f0e68c; /*font-weight: bold*/ } /* html/xml tag    - lightyellow */
+code .atn { color: #bdb76b; /*font-weight: bold*/ } /* attribute name  - khaki */
+code .atv { color: #ffa0a0 } /* attribute value - pink */
+code .dec { color: #98fb98 } /* decimal-lightgreen */
+
+
+ol.linenums { min-width: fit-content; padding: .8rem 0; padding-left: 4.5rem; }
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  font-size: 1.4rem;
+  list-style-position: outside;
+  list-style:  decimal;
+  border-left: .3rem #999 double;
+  padding-right: 3rem;
+  padding-left: 1.6rem;
+  line-height: 1.6rem;
+}
+/* normal lines */
+.prettyprint li:nth-child( 2n + 1 ) { background: #292929 }
+.prettyprint li:nth-child( 2n     ) { background: #222222 }
+.prettyprint li::marker { color: #666 }
+/* highlighted lines */
+.prettyprint li.highlight-start { border-top:    1px #999 solid }
+.prettyprint li.highlight-end   { border-bottom: 1px #999 solid }
+.prettyprint li.highlight-odds  { background-color: #090909 }
+.prettyprint li.highlight-evens { background-color: #111111 }
+.prettyprint li.highlight-odds::marker,
+.prettyprint li.highlight-evens::marker { color: #eee }
+
+/* code-prettify */
+.code-prettify-container {
+  margin-top: 1.6rem;
+  scroll-margin-top: 8rem;
+  /* background: #444; */
+  background:linear-gradient(to bottom,
+  #444 0 calc(1.8rem + .2rem * 2),
+  #222 calc(1.8rem + .2rem * 2) 67%,
+  #444 90% 100%
+);
+  border-radius: .4rem;
+}
+.lang-type-tabs {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.lang-type-tabs::-webkit-scrollbar { display: none; }
+.lang-type-tab {
+  min-width: fit-content;
+  background: #ddd;
+  color: #444;
+  font-family: 'Economica';
+  text-align: center;
+  border-radius: .4rem .4rem 0 0;
+  cursor: auto; /* tabが複数のときnew.jsでpointerに */
+  padding: .2rem 1.6rem;
+  font-size: 1.8rem;
+  letter-spacing: .15rem;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: min-width .75s;
+  line-height: 1.8rem;
+  height: calc(1.8rem + .2rem * 2);
+}
+.lang-type-tab.active {
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+  pointer-events: none;
+}
+pre {
+  margin: 0;
+  overflow-y: scroll;
+  transition: height .75s;
+  border-radius: 0 0 .4rem .4rem;
+
+/* scroll barを非表示: IE / ME        */ 
+  -ms-overflow-style: none;
+/* scroll barを非表示: Firefox        */
+  scrollbar-width: none;
+}
+/* scroll barを非表示: Chrome, Safari */
+pre::-webkit-scrollbar { display: none }
+
+.code-prettify-content.active {
+  display: block;
+}
+.code-prettify-content {
+  display: none;
+  border-radius: 0 .4rem .4rem .4rem;
+  /* background:linear-gradient(to bottom,
+  #222 0 67%,
+  #444 90% 100%
+); */
+}
+.code-prettify-content::-webkit-scrollbar { display: none }
+
+.enlarge-btn {
+  font-size: 1.4rem;
+  display: none;
+  justify-content: center;
+  padding: .8rem 1.6rem;
+  margin: 0 auto;
+  cursor: pointer;
+  line-height: 1.6rem;
+  height: calc(1.6rem + .8rem * 2);
+}
+.enlarge-btn.show { display: flex }
+.enlarge-text-container { display: flex; }
+.enlarge-text,
+.reduce-text {
+  font-family: 'Economica';
+  font-size: inherit;
+  line-height: inherit;
+  color: #eee;
+  letter-spacing: .25rem;
+  font-weight: bold;
+  padding-left: .8rem;
+}
+.enlarge-text { display: block }
+.reduce-text  { display: none  }
+.enlarged .enlarge-text { display: none  }
+.enlarged .reduce-text  { display: block }
+
+/* outlineで付いたstyleのキャンセル */
+.enlarge-btn .fa-chevron-up { height: auto; color: #eee; }
+.enlarge-btn .fa-chevron-up          { transform: rotate(180deg) }
+.enlarge-btn.enlarged .fa-chevron-up { transform: rotate(0)      }
+
+
+.clipboard-btn {
+  position: absolute;
+    top: 0; right: 0; z-index: 1; 
+  background: #eee;
+  opacity: .7;
+  width: 2.8rem;
+  padding: .8rem 0;
+  border-radius: 0 0 0 .4rem;
+}
+.fa-clipboard {
+  color: #222;
+  font-size: 1.6rem;
+  transition: transform .3s;
+}
+
+code {
+  /* safariでclip board icon部分をタップするとイベントを設定していないのに
+  文字が急に大きくなる謎挙動を回避 */
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.4rem;
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+  /* scroll barを非表示: IE / ME */ 
+  -ms-overflow-style: none;
+  /* scroll barを非表示: Firefox */
+  scrollbar-width: none;
+}
+/* scroll barを非表示: Chrome, Safari */
+code::-webkit-scrollbar { display: none }
+
+.code-prettify-content {
+  position: relative;
+}
