@@ -48,7 +48,7 @@ const ppHighlight = async (highlightLinesList) => {
 const writeCode = async () => {
   // forEach文中でawaitが使用不可のためfor文
   for (let i = 0; i < prettifyCodes.length; i++) {
-    const response = await fetch(`../${ codeDir }/${ i + 1 }.txt`);
+    const response = await fetch(`https://mkoichiro.github.io/memorarium/${ codeDir }/${ i + 1 }.txt`);
 
     if (response.ok) {
       const text = await response.text();
