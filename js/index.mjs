@@ -188,12 +188,13 @@ const carouselSlides = document.querySelector('.slides');
 carouselArtIds.forEach(id => {
   const artInfo  = artObj.filter(  obj  => obj.id  ===             id )[0],
         langInfo = langArr.filter( lang => lang.id === artInfo.langId )[0];
+  const carHref  = `../${ artInfo.href }`;
   const liSlide = document.createElement('li');
   liSlide.classList.add('slide');
   liSlide.innerHTML = `<article>
 
                          <div class="text-contents">
-                           <a href="https://mkoichiro.github.io/memorarium/${ artInfo.href }" 
+                           <a href="${ carHref }" 
                               class="${ langInfo.lang } art-link">
                               <h3 class="art-title">
                                   <i class="${ langInfo.iconClassList }"></i>
