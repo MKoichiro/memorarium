@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font: 'Economica' -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica">
+  <!-- icon: link        -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- font awesome      -->
+    <script src="https://kit.fontawesome.com/a6578f7748.js" crossorigin="anonymous"></script>
+  <!-- stylesheets       -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="../css/prettify.css">
+  <!-- favicon          -->
+    <link id="favicon" rel="shortcut icon" href="../img/favicon/favicon1.png" type="image/x-icon">
+  
+  <!-- articleInfo.jsonで 参照する記事の ID を new.mjs に渡す -->
+    <script>const articleId = 0, relatedArtIds = [0, 1, 5, 3];</script>
+  <!-- txtファイル読み込みの非同期処理 -->
+    <script type="module" src="../js/readCodeTxt.mjs"></script>
+  <!-- main module -->
+    <script type="module" src="../js/new.mjs"></script>
+
+  <title>MEMORARiUM | New Article</title>
+</head>
+
+<body class="preload">
+<div class="sub-body">
+  <!-- header部分 -->
+  <header id="top">
+    <div id="bubbles-bg-container">
+      <div id="header-container">
+        <a href="../index.html" id="header-logo">
+          <img src="../img/favicon/favicon1.png" alt="">
+          <h1>MEMORARiUM</h1>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main部分 -->
+  <main>
+    <section>
+      ⋮
+      ⋮ <!-- 1_1以降で解説 -->
+      ⋮
+    </section>
+  </main>
+
+  <!-- aside部分 -->
+  <aside>
+    <section id="menu-container">
+      <h4 class="menu-title">MENU</h4>
+      <nav class="menu-nav">
+        <ul class="ul-first-floor">          <!-- 第1層 -->
+          <li><p><a href="#">About</a></p>
+          ⋮
+          </li>
+          <li class="li-first-floor"><p>Programming</p>
+            <ul class="ul-second-floor">     <!-- 第2層 -->
+              <li class="li-second-floor"><p>HTML</p>
+                <ul class="ul-third-floor">  <!-- 第3層 -->
+                  <li><a href="#"><p>第一回</p></a></li>
+                  <li><a href="#"><p>第二回</p></a></li>
+                  ⋮
+                </ul>
+              </li>
+              <li class="li-second-floor"><p>CSS</p>
+                <ul class="ul-third-floor">  <!-- 第3層 -->
+                  <li><a href="#"><p>第一回</p></a></li>
+                  ⋮
+                </ul>
+              </li>
+              <li class="li-second-floor"><p>JavaScript</p>
+                <ul class="ul-third-floor">  <!-- 第3層 -->
+                  <li><a href="#"><p>第一回</p></a></li>
+                  ⋮
+                </ul>
+              </li>
+              <li class="li-second-floor"><p>PHP</p>
+                <ul class="ul-third-floor">  <!-- 第3層 -->
+                  <li><a href="#"><p>第一回</p></a></li>
+                  ⋮
+                </ul>
+              </li>
+              <li class="li-second-floor"><p>vscode</p>
+                <ul class="ul-third-floor">  <!-- 第3層 -->
+                  <li><a href="#"><p>第一回</p></a></li>
+                  ⋮
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+      <h4 class="menu-title">MENU</h4>
+    </section>
+  </aside>
+
+  <!-- aside開閉の魚 -->
+  <div id="fish-btn-wrapper">
+    <button id="fish-btn">
+      <img id="img-fish" src="../img/30643.png" alt="">
+    </button>
+  </div>
+
+  <!-- footer部分 -->
+  <footer>
+    <div id="aquarium-bg-container">
+
+      <div id="footer-container">
+        <a href="#top" id="footer-logo">
+          <img src="../img/favicon/favicon1.png" width="100" height="100" alt="">
+          <h4>MEMORARiUM</h4>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home   </a></li>
+            <li><a href="#"            >About  </a></li>
+            <li><a href="#"            >Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 水草 -->
+      <div id="seaweed-bg">
+        <div class="seaweed"><hr class="short"><hr class="long"><hr class="middle"></div>
+        <div class="seaweed"><hr class="short"><hr class="long"><hr class="middle"></div>
+      </div>
+      <!-- 砂粒 -->
+      <div id="sand-bg">
+        <!-- 砂粒(div>span)はindex.jsで生成 -->
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- code-prettify -->
+  <script src="../js/prettify.js"></script>
+  <script src="../js/lang-css.js"></script>
+  <!-- header, aside, footer -->
+  <script src="../js/common.js"></script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<section class="output-container">
+
+
+  <nav class="output-tabs">
+    <!-- ////// タブ1: "output: 1" ////// -->
+    <button class="output-tab active" data-tab-link-id="XX-YY-ZZ-01"> output: 1 </button>
+
+    <!-- ////// タブ2: "output: 2" ////// -->
+    <button class="output-tab"        data-tab-link-id="XX-YY-ZZ-02"> output: 2 </button>
+  </nav>
+
+
+  <div class="output-contents">
+    <!-- ////// アウトプットコンテンツ1 ////// -->
+    <div class="output-content active">
+      <!-- アウトプット例を示すHTML -->
+    </div>
+
+    <!-- ////// アウトプットコンテンツ2 ////// -->
+    <div class="output-content">
+      <!-- アウトプット例を示すHTML -->
+    </div>
+  </div>
+
+
+</section>

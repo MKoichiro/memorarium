@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* --- reset ------------------------------------------------------------------------------ */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+
+  /* 各種icon部分の不具合を解決 */
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: 'Economica', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+               'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック',
+                sans-serif;
+}
+h1         { font-size: 4.8rem }
+h2         { font-size: 3.6rem }
+h3         { font-size: 2.4rem }
+h4, h5, h6 { font-size: 1.6rem }
+p, a       { font-size: 1.6rem }
+body {
+  background-color: #eee;
+  color: #666;
+}
+html, body,
+h1, h2, h3, h4, h5, h6, p,
+ul, ol, li,
+button, a,
+fieldset { margin: 0;  padding: 0 }
+fieldset { border: none }
+li { list-style-type: none }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #444;
+}
+img {
+  vertical-align: bottom;
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- header, main, footer の基本設定 ----------------------------------------------------- */
+header,
+footer { background: #ddd }
+header { height: 150px }
+footer { height: 500px }
+h1.header-heading,
+h3.footer-heading { text-align: left }
+
+.header-container,
+main,
+.footer-container { width: 60% }
+.header-container,
+.footer-container { margin:   0rem auto;  padding: 3.2rem 0 }
+main              { margin: 3.2rem auto                     }
+
+.footer-links ul { margin-top: 3.2rem }
+.footer-links li + li { margin-top: 1.6rem }
+.footer-links a { display: block }
+.footer-links a:hover { color: #111 }
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- main内部の設定 --------------------------------------------------------------------- */
+section + section {
+  margin-top: 2.4rem;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+.racoon-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- メディアクエリ --------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  html { font-size: 50% }
+  .header-container,
+  main,
+  .footer-container { width: 90% }
+}
+@media (max-width: 600px) {
+  html { font-size: 40% }
+}
+/* ---------------------------------------------------------------------------------------- */

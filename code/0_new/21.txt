@@ -1,0 +1,82 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-solid fa-list-ul"></i> How to Insert List 3
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph">
+        ul.note-list-container[data-list-style-type="●"]を挿入。
+        li.note-list>div.note-list-itemの直下、
+        最初の子要素としてdiv.note-list-titleを挿入すると、
+        箇条書きに小見出しが付けられる。
+      </p>
+
+      <ul class="note-list-container" data-list-style-type="●"> <!-- ← ココから -->
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小見出し
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小見出しのタイトルがこのように、<br>かなり、とんでもなく、すごく長くなる場合
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <p class="note-paragraph">
+        小見出し部分の要素の長さはコンテナの2/3以下に制限し、
+        最大のものに合わせるようにnew.jsで調節している。
+        なお、1/3以下の場合はflex-direction: row;として、
+        小見出しと同じ行に、続けて説明部分のテキストが始まる仕様。
+      </p>
+
+      <ul class="note-list-container" data-list-style-type="●">
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小見出し
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

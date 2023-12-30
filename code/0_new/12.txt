@@ -1,0 +1,8 @@
+<p class="paragraph">
+  <mark class="simple-1"> 灰色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-1"> 灰色のストライプのマーカー </mark> <br>
+  <mark class="simple-2"> 橙色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-2"> 橙色のストライプのマーカー </mark> <br>
+  <mark class="simple-3"> 紺色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-3"> 紺色のストライプのマーカー </mark> <br>
+  <mark class="simple-4"> 黄色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-4"> 黄色のストライプのマーカー </mark> <br>
+  <mark class="simple-5"> 紫色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-5"> 紫色のストライプのマーカー </mark> <br>
+  <mark class="simple-6"> 茶色のマーカー </mark> <!-- スペース --> &nbsp;&nbsp; <mark class="stripe-6"> 茶色のストライプのマーカー </mark> <br>
+</p>

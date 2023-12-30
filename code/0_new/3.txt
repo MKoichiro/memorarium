@@ -1,0 +1,11 @@
+<!-- header部分 -->
+<header id="top">
+  <div id="bubbles-bg-container">
+    <div id="header-container">
+      <a href="../index.html" id="header-logo">
+        <img src="../img/favicon/favicon1.png" alt="">
+        <h1>MEMORARiUM</h1>
+      </a>
+    </div>
+  </div>
+</header>

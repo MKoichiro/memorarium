@@ -1,0 +1,47 @@
+<body class="preload">
+<div class="sub-body">
+
+  ⋮
+  ⋮<!-- aside/menu開閉の魚部分 -->
+  ⋮
+
+  <!-- footer部分 -->
+  <footer>
+    <div id="aquarium-bg-container">
+
+      <div id="footer-container">
+        <a href="#top" id="footer-logo">
+          <img src="../img/favicon/favicon1.png" width="100" height="100" alt="">
+          <h4>MEMORARiUM</h4>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home   </a></li>
+            <li><a href="#"            >About  </a></li>
+            <li><a href="#"            >Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 水草 -->
+      <div id="seaweed-bg">
+        <div class="seaweed"><hr class="short"><hr class="long"><hr class="middle"></div>
+        <div class="seaweed"><hr class="short"><hr class="long"><hr class="middle"></div>
+      </div>
+      <!-- 砂粒 -->
+      <div id="sand-bg">
+        <!-- 砂粒(div>span)はindex.jsで生成 -->
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- code-prettify -->
+  <script src="../js/prettify.js"></script>
+  <script src="../js/lang-css.js"></script>
+  <!-- header, aside, footer -->
+  <script src="../js/common.js"></script>
+</div>
+</body>
+
+</html>

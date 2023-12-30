@@ -1,0 +1,12 @@
+  <body>
+    ⋮
+    ⋮
+    ⋮
+    <!-- code-prettify -->
+    <script src="../js/prettify.js"></script>
+    <script src="../js/lang-css.js"></script>
+    <!-- header, aside, footer -->
+    <script src="../js/common.js"></script>
+  </body>
+</html>
+

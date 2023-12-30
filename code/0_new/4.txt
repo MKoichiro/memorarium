@@ -1,0 +1,27 @@
+<body class="preload">
+<div class="sub-body">
+
+  ⋮
+  ⋮ <!-- header部分 -->
+  ⋮
+
+  <!-- main部分 -->
+  <main>
+    ⋮
+    ⋮ <!-- 1_1以降で解説 -->
+    ⋮
+  </main>
+
+  ⋮
+  ⋮ <!-- aside/footer部分 -->
+  ⋮
+
+  <!-- code-prettify -->
+  <script src="../js/prettify.js"></script>
+  <script src="../js/lang-css.js"></script>
+  <!-- header, aside, footer -->
+  <script src="../js/common.js"></script>
+</div>
+</body>
+
+</html>

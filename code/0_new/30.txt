@@ -1,0 +1,35 @@
+<section class="code-prettify-container">
+
+
+  <nav class="lang-type-tabs">
+    <!-- ////// タブ1: "HTML: 1" ////// -->
+    <button class="lang-type-tab active" data-tab-link-id="XX-YY-ZZ-01"> HTML: 1 </button>
+
+    <!-- ////// タブ2: "HTML: 2" ////// -->
+    <button class="lang-type-tab"        data-tab-link-id="XX-YY-ZZ-02"> HTML: 2 </button>
+  </nav>
+
+
+  <div class="code-prettify-contents">
+    <!-- ////// コンテンツ1: "code-prettify-container" ////// -->
+    <div class="code-prettify-content active">
+      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+      <pre><code class="prettyprint linenums"> <!-- Read ○○.txt --> </code></pre>
+    </div>
+
+    <!-- ////// コンテンツ2: "code-prettify-container" ////// -->
+    <div class="code-prettify-content"       >
+      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+      <pre><code class="prettyprint linenums"> <!-- Read ○○.txt --> </code></pre>
+    </div>
+
+    <!-- ////// "Show All" / "Reduce" ボタン部分       ////// -->
+    <a class="enlarge-btn">
+      <i class="fa-solid fa-chevron-up"></i>
+      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+    </a>
+  </div>
+
+
+</section>
+

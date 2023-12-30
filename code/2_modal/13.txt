@@ -1,0 +1,8 @@
+/* --- .modal-contents-container: モーダルの中身 ------------------------------------ */
+.modal-contents-container {
+  margin: .8rem;
+  display: block;
+}
+/* 最小化状態では非表示に */
+.minimized .modal-contents-container { display: none }
+/* --------------------------------------------------------------------------------- */

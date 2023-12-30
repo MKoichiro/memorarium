@@ -1,0 +1,6 @@
+<div class="two-col-container">
+<p class="paragraph">
+  画像と文章の2-columnにしたければこのように書く。... 検索・修正すれば良い。画像と文章の2-columnにしたければこのように書く。... 検索・修正すれば良い。画像と文章の2-columnにしたければこのように書く。... 検索・修正すれば良い。
+</p>
+<img src="../img/XXX.png" alt="XXX">
+</div>

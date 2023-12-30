@@ -1,0 +1,25 @@
+/* --- button#enlarge-btn: 展開アイコン(設定マーク) -------------------------------- */
+#enlarge-btn {
+  /* 展開時には非表示にしておく */
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+/* 最小化状態で表示する */
+.minimized #enlarge-btn {
+  /* width/ height は親(div.modal)を継承 */
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: width   var(--enlarge-duration) 0ms,
+              height  var(--enlarge-duration) 0s,
+              opacity var(--enlarge-duration) var(--enlarge-duration);
+
+  /* その他のスタイル */
+  color: var(--color-modal-body);
+  font-size: 1.8rem;
+}
+.minimized #enlarge-btn {
+  line-height: var(--minimized-modal-diameter);
+}
+/* --------------------------------------------------------------------------------- */

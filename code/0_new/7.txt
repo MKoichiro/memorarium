@@ -1,0 +1,53 @@
+  <h1 id="title">
+    <!-- 【new.mjs, articleInfo.json】
+      <mark class="simple-1"> 見出し、記事タイトル </mark>
+    -->
+  </h1>
+
+  <div class="date-line">
+    <!-- 【new.mjs, articleInfo.json】 timeタグにdatetime属性を付与 -->
+    <hr><time class="date" id="this-art-date"><!-- 【new.mjs, articleInfo.json】 [ 20XX.XX.XX ] --></time><hr>
+  </div>
+  <p class="paragraph" id="intro">
+    <!-- 【new.mjs, articleInfo.json】イントロの記述 -->
+  </p>
+  <section id="outline-acc-container">
+    <div class="outline-bar">
+      <h4 class="outline-text"><i class="fa-solid fa-bookmark"></i>OUTLINE</h4>
+    </div>
+    <!-- 以下目次は new.mjs で生成
+    <ul>
+      <li class="index-li-first-floor">
+        <a class="index-link" href="#chapter2">
+          <span class="outline-chapter-num">0. </span> Chapter 0 のタイトル
+        </a>
+      </li>
+      <li class="index-li-first-floor">
+        <a class="index-link t" href="#chapter1">
+          <span class="outline-chapter-num">1. </span> Chapter 1 のタイトル
+        </a>
+    <ul>
+      :
+      :
+      :
+      -->
+    <div class="outline-bar">
+      <a id="outline-btn" href="#outline-acc-container">
+        <i class="fa-solid fa-chevron-up"></i>
+        <p id="open-text" >OPEN</p>
+        <p id="close-text">CLOSE</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Chapter 0 -->
+  <section class="chapter" id="chapter0">
+    <a class="chapter-title-container" href="#chapter0">
+      <h2 class="chapter-title"> <!-- Chapter 0 のタイトル --> </h2>
+    </a>
+    <section class="chapter-contents-container">
+      <p class="paragraph">
+        <!-- Chapter 0 の文章 -->
+      </p>
+    </section>
+  </section>

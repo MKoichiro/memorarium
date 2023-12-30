@@ -1,0 +1,23 @@
+<section class="code-prettify-container">
+
+  <!-- タブ部分 -->
+  <nav class="lang-type-tabs">
+    <button class="lang-type-tab active">HTML</button>
+  </nav>
+
+  <div class="code-prettify-contents">
+    <div class="code-prettify-content active">
+      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+      <pre><code class="prettyprint linenums lang-css" data-pp-highlight="3 11-13 16">
+        <!-- ここに例えば "1.txt" 等に記述してある文字列を読み込み -->
+      </code></pre>
+    </div>
+
+    <!-- "Show All" / "Reduce" ボタン部分 -->
+    <a class="enlarge-btn">
+      <i class="fa-solid fa-chevron-up"></i>
+      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+    </a>
+  </div>
+
+</section>

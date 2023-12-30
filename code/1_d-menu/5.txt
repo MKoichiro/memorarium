@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- "font awesome": '≡', '✕'マークの読み込み元 -->
+  <script src="https://kit.fontawesome.com/XXXXXX.js" crossorigin="anonymous"></script>
+  <!-- 見出しの英字font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica">
+
+  <!-- 簡易resetと共通部分 -->
+  <link rel="stylesheet" href="../commonForDemo1.css">
+  <!-- デモツールモーダルのcssは省略 -->
+  <!-- メインのスタイルシート -->
+  <link rel="stylesheet" href="style.css">
+
+  <title> Demo | DRAWER MENU </title>
+</head>
+
+<body>
+
+  <!-- ドロワーメニュー -->
+  <aside>
+    <nav class="menu">
+      <h3 class="menu-title"> MENU </h3>
+      <ul class="menu-lists">
+        <li><a href="#"> link-01 link-01 link-01 </a></li>
+        <li><a href="#"> link-02 link-02 link-02 </a></li>
+          ⋮
+          ⋮
+          ⋮
+        <li><a href="#"> link-19 link-19 link-19 </a></li>
+        <li><a href="#"> link-20 link-20 link-20 </a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- 背景をぼかすマスク部分 -->
+  <div class="mask"></div>
+
+  <!-- 開閉ボタン -->
+  <button id="menu-btn">
+    <!-- '≡' マーク -->
+    <i class="fa-solid fa-bars show"></i>
+    <!-- 'X' マーク -->
+    <i class="fa-solid fa-xmark"    ></i>
+  </button>
+
+
+  <!-- header, main, footer でスクロールできる高さが出れば何かいても可 -->
+  <header>  <!-- 本題と関係ないので省略 --> </header>
+  <main>    <!-- 本題と関係ないので省略 --> </main>
+  <footer>  <!-- 本題と関係ないので省略 --> </footer>
+
+
+  <!-- デモツールモーダル部分は省略 -->
+  <!-- デモツールモーダル用jsは省略 -->
+  <!-- メインスクリプト -->
+  <script src="main.js"></script>
+</body>
+</html>

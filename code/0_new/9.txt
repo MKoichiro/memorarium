@@ -1,0 +1,6 @@
+/* 目次 */
+.outline-f1 { counter-reset: chaplink -1   } /* 目次の章番号が -1 + 1 から始まる */
+.outline-b1 { counter-reset: subchaplink 0 } /* 目次の節番号が  0 + 1 から始まる */
+
+main     { counter-reset: chapnum -1   }     /* 章番号が -1 + 1 から始まる */
+.chapter { counter-reset: subchapnum 0 }     /* 節番号が  0 + 1 から始まる */

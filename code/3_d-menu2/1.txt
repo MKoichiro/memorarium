@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- "font awesome": '≡', '✕'マークの読み込み元 -->
+  <script src="https://kit.fontawesome.com/a6578f7748.js" crossorigin="anonymous"></script>
+  <!-- 見出しの英字font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica">
+
+  <!-- 簡易resetと共通部分 -->
+  <link rel="stylesheet" href="../common.css">
+  <!-- メインのスタイルシート -->
+  <link rel="stylesheet" href="style.css">
+
+  <title> Demo | DRAWER MENU 2 </title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1 class="header-heading"> Demo for DRAWER MENU 2 </h1>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section>
+        <h2 class="section-title"> Section Title 1 </h2>
+        <div class="contents">
+          <p>
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          </p>
+          <img class="racoon-img"
+            src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+            alt="アライグマの画像">
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title"> Section Title 2 </h2>
+        <div class="contents">
+          <p>
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          </p>
+          <img class="racoon-img"
+            src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+            alt="アライグマの画像">
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title"> Section Title 3 </h2>
+        <div class="contents">
+          <p>
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          </p>
+          <img class="racoon-img"
+            src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+            alt="アライグマの画像">
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title"> Section Title 4 </h2>
+        <div class="contents">
+          <p>
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+            Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          </p>
+          <img class="racoon-img"
+            src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+            alt="アライグマ">
+        </div>
+      </section>
+    </article>
+
+    <!-- 開閉ボタン -->
+    <button id="menu-btn">
+      <!-- "MENU"の文字(PCのみ) -->
+      <span class="menu-txt">MENU</span>
+      <!-- '<'のマーク -->
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- ドロワーメニュー -->
+    <aside>
+      <nav class="menu">
+        <h3 class="menu-heading"> MENU </h3>
+        <ul class="menu-lists">
+          <li><a href="#"> link-01 link-01 link-01 </a></li>
+          <li><a href="#"> link-02 link-02 link-02 </a></li>
+          <li><a href="#"> link-03 link-03 link-03 </a></li>
+          <li><a href="#"> link-04 link-04 link-04 </a></li>
+          <li><a href="#"> link-05 link-05 link-05 </a></li>
+          <li><a href="#"> link-06 link-06 link-06 </a></li>
+          <li><a href="#"> link-07 link-07 link-07 </a></li>
+          <li><a href="#"> link-08 link-08 link-08 </a></li>
+          <li><a href="#"> link-09 link-09 link-09 </a></li>
+          <li><a href="#"> link-10 link-10 link-10 </a></li>
+        </ul>
+      </nav>
+    </aside>
+
+  </main>
+
+
+  <footer>
+    <div class="footer-container">
+      <h3 class="footer-headding"> FOOTER </h3>
+      <nav class="footer-links">
+        <ul>
+          <li><a href="#"> HOME </a></li>
+          <li><a href="#"> ABOUT </a></li>
+          <li><a href="#"> CONTACT </a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- メインスクリプト -->
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+/* --- (aside > nav.menu >) ul.menu-lists部分 --------------------------------------------- */
+/* リスト内のスクロールで発生する、"スクロースチェーン" と "スクロールバウンス" を回避 */
+.menu-lists {
+  /* はみ出す分はスクロールさせる */
+  overflow-y: scroll;
+  /* overscroll-behavior を指定 */
+  overscroll-behavior: none;
+
+
+  /* その他のスタイル */
+  margin: var(--menu-lists-margin-vertical) 0;
+  height: var(--menu-lists-height);
+
+  -ms-overflow-style: none;       /* scroll barを非表示: IE / ME */  
+  scrollbar-width: none;          /* scroll barを非表示: Firefox */
+}
+.menu-lists::-webkit-scrollbar {  /* scroll barを非表示: Chrome, Safari */
+  display: none;
+}
+/* ---------------------------------------------------------------------------------------- */

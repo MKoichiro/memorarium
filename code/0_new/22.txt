@@ -1,0 +1,48 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-solid fa-list-ul"></i> How to Insert List 4
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph ">
+        ol.note-list-container[data-list-style-type="upper-alpha"]を挿入。
+        li.note-list>div.note-list-itemの直下、
+        最初の子要素としてdiv.note-list-titleを挿入すると、
+        箇条書きに小見出しが付けられる。
+      </p>
+
+      <ol class="note-list-container" data-list-style-type="upper-alpha"> <!-- ← ココから -->
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小見出し
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+
+        <li class="note-list">
+          <div class="note-list-item">
+            <div class="note-list-title">
+              小見出し
+            </div>
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+      </ol>
+
+    </section>
+  </div>
+</section>

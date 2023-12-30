@@ -1,0 +1,56 @@
+.two-col-container {
+display: flex;
+margin-top: 1.6rem;
+}
+.two-col-container .paragraph {
+/* .paragraphに付いたpaddingのキャンセル */
+padding-top: 0;
+}
+.two-col-container img {
+width: 33%;
+margin-left: 1.6rem;
+object-fit: cover;
+align-self: center;
+}
+.two-col-container {
+display: flex;
+margin-top: 1.6rem;
+}
+.two-col-container .paragraph {
+/* .paragraphに付いたpaddingのキャンセル */
+padding-top: 0;
+}
+.two-col-container img {
+width: 33%;
+margin-left: 1.6rem;
+object-fit: cover;
+align-self: center;
+}
+.two-col-container {
+display: flex;
+margin-top: 1.6rem;
+}
+.two-col-container .paragraph {
+/* .paragraphに付いたpaddingのキャンセル */
+padding-top: 0;
+}
+.two-col-container img {
+width: 33%;
+margin-left: 1.6rem;
+object-fit: cover;
+align-self: center;
+}
+.two-col-container {
+display: flex;
+margin-top: 1.6rem;
+}
+.two-col-container .paragraph {
+/* .paragraphに付いたpaddingのキャンセル */
+padding-top: 0;
+}
+.two-col-container img {
+width: 33%;
+margin-left: 1.6rem;
+object-fit: cover;
+align-self: center;
+}

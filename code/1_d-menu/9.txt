@@ -1,0 +1,25 @@
+/* --- 背景をぼかす div.mask 部分 --------------------------------------------------------- */
+/*  mask は最初は非表示。display: none/block でも良いが、アニメは付かない */
+.mask {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1000ms;
+}
+.mask.show {
+  opacity: 1;
+  pointer-events: auto;
+  /* 画面を覆う */
+  position: fixed;
+  position: -webkit-fixed; /* fixed 未対応ブラウザ用 */
+    top:     0;
+    right:   0;
+    left:    0;
+    z-index: 1;
+  height: 100lvh;
+  /* [memo] ↑ "height: 100dvh;" や "bottom: 0;" だと、safariなどのタブバーの伸縮でがたつく。*/
+
+  /* 背景をボカす */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* 未対応ブラウザ用 */
+}
+/* ---------------------------------------------------------------------------------------- */

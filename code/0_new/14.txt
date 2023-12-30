@@ -1,0 +1,6 @@
+<b class="bold-1"> 黒色の太字 </b> <br>
+<b class="bold-2"> 橙色の太字 </b> <br>
+<b class="bold-3"> 水色の太字 </b> <br>
+<b class="bold-4"> 黄色の太字 </b> <br>
+<b class="bold-5"> 紫色の太字 </b> <br>
+<b class="bold-6"> 茶色の太字 </b> <br>

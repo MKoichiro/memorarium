@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+:root {
+  --menu-title-height: 2.8rem;
+  --menu-btn-diameter: 5rem;
+  --menu-btn-margin: 1.6rem;
+  --menu-lists-margin-vertical: 1.6rem; /* margin-top および bottom の意 */
+
+  /* 以下は "MENU" に付く margin-top と、ul.menu-lists の高さを計算している。
+  テキトーな固定値でもよいが計算するときれいでレスポンシブになる */
+  --menu-title-margin-top: calc(
+                                    var(--menu-btn-diameter)
+                                  + var(--menu-btn-margin) * 2
+                                );
+  --menu-lists-height: calc(
+                                100dvh
+                              - (
+                                    var(--menu-title-height)
+                                  + var(--menu-title-margin-top)
+                                  + var(--menu-lists-margin-vertical) * 2
+                                )
+                            );
+}
+
+
+/* --- aside部分 -------------------------------------------------------------------------- */
+/* 画面右上に固定 → translateX(100%)でちょうど自身の横幅分だけ画面外に移動しておく */
+aside {
+  width: 50%;
+  height: 100lvh;
+  position: fixed;
+  position: -webkit-fixed; /* fixed 未対応ブラウザ用 */
+    top: 0;
+    right: 0;
+    z-index: 2;
+  transform: translateX(100%);
+  transition: transform 1000ms;
+
+
+  /* その他のスタイル */
+  padding: 0 1.6rem;
+  background: rgba(0 0 0 / .8);
+  color: #eee;
+}
+/* 元の位置に戻して表示 */
+aside.show {
+  transform: translateX(0);
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- (aside > nav.menu >) ul.menu-lists部分 --------------------------------------------- */
+/* リスト内のスクロールで発生する、"スクロースチェーン" と "スクロールバウンス" を回避 */
+.menu-lists {
+  overflow-y: scroll;
+  overscroll-behavior: none;
+
+
+  /* その他のスタイル */
+  margin: var(--menu-lists-margin-vertical) 0;
+  height: var(--menu-lists-height);
+
+  -ms-overflow-style: none;       /* scroll barを非表示: IE / ME */  
+  scrollbar-width: none;          /* scroll barを非表示: Firefox */
+}
+.menu-lists::-webkit-scrollbar {  /* scroll barを非表示: Chrome, Safari */
+  display: none;
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- 背景をぼかす div.mask 部分 --------------------------------------------------------- */
+/*  mask は最初は非表示。display: none/block でも良いが、アニメは付かない */
+.mask {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1000ms;
+}
+.mask.show {
+  opacity: 1;
+  pointer-events: auto;
+  /* 画面を覆う */
+  position: fixed;
+  position: -webkit-fixed; /* fixed 未対応ブラウザ用 */
+    top:     0;
+    right:   0;
+    left:    0;
+    z-index: 1;
+  height: 100lvh;
+  /* [memo] ↑ "height: 100dvh;" や "bottom: 0;" だと、safariなどのタブバーの伸縮でがたつく。*/
+
+  /* 背景をボカす */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* 未対応ブラウザ用 */
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* --- 開閉ボタン部分 --------------------------------------------------------------------- */
+/* ボタンを画面右上に固定 */
+button#menu-btn {
+  position: fixed;
+  position: -webkit-fixed; /* fixed 未対応ブラウザ用 */
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+  /* その他のスタイル */
+  width: var(--menu-btn-diameter);
+  height: var(--menu-btn-diameter);
+  margin: var(--menu-btn-margin);
+  background: #eee;
+  border-radius: 50%;
+}
+/* showクラスでアイコンを切り替え */
+i.fa-bars,      i.fa-xmark      { display: none  }
+i.fa-bars.show, i.fa-xmark.show { display: block }
+/* ---------------------------------------------------------------------------------------- */
+
+
+
+/* 以下はドロワーメニューの機能的にはあまり重要ではない、基本的なスタイリングをしている部分 */
+/* ドロワーメニューのタイトルやリストのスタイル */
+h3.menu-title {
+  text-align: center;
+  height: var(--menu-title-height);
+  line-height: var(--menu-title-height);
+  margin-top: var(--menu-title-margin-top);
+}
+.menu-lists li + li {
+  border-top: .15rem solid #eee;
+}
+.menu-lists a {
+  display: block;
+  font-size: 2.4rem;
+  height: 6rem;
+  line-height: 6rem;
+  padding: 0 .8rem;
+  transition: background-color 500ms;
+
+  /* 1行で収まらなければ"..."で省略 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-lists a:hover {
+  background-color: #666;
+}
+
+
+/* ボタンのスタイル */
+i.fa-bars,
+i.fa-xmark {
+  font-size: 2.4rem;
+  width: 100%;
+  height: 100%;
+  line-height: var(--menu-btn-diameter);
+}

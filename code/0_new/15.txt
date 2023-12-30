@@ -1,0 +1,6 @@
+.bold-1 { color: black               }
+.bold-2 { color: var(--html-color)   }
+.bold-3 { color: var(--css-color)    }
+.bold-4 { color: var(--js-color)     }
+.bold-5 { color: var(--php-color)    }
+.bold-6 { color: var(--others-color) }

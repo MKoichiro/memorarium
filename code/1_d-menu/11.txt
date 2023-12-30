@@ -1,0 +1,26 @@
+'use strict';
+
+// 要素取得 ////////////////////////////////////////////////////////////////////
+const aside = document.querySelector('aside'),
+      mask  = document.querySelector('div.mask'),
+      btn   = document.querySelector('button#menu-btn');
+const iconBars   = btn.querySelector('.fa-bars'),
+      iconXmark  = btn.querySelector('.fa-xmark');
+////////////////////////////////////////////////////////////////////////////////
+
+
+// 関数定義 ////////////////////////////////////////////////////////////////////
+// button, mask の 'click' イベントハンドラ
+const memuClickHandler = () => {
+  aside.classList.toggle('show');
+  mask.classList.toggle('show');
+  iconBars.classList.toggle('show');
+  iconXmark.classList.toggle('show');
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+// クリックで処理を実行 ////////////////////////////////////////////////////////
+btn.addEventListener(  'click', memuClickHandler );
+mask.addEventListener( 'click', memuClickHandler );
+////////////////////////////////////////////////////////////////////////////////

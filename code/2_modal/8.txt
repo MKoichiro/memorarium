@@ -1,0 +1,33 @@
+  <!-- モーダル -->
+  <div class="modal minimized"> <!-- 初期状態を最小化にしたければ、"minimized"クラスをつけておく -->
+
+    <!-- [部品1] 展開時の bar 部分 -->
+    <div class="modal-bar">
+      <p class="modal-title"> 設定 </p>
+      <div class="bar-btns">
+        <!-- 最小化ボタン -->
+        <button id="minimize-btn">
+          <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+        </button>
+        <!-- 移動可能アイコン -->
+        <button class="movable-btn">
+          <i class="fa-solid fa-arrows-up-down-left-right" ></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- [部品2] 最小化状態の設定(展開)ボタン -->
+    <button id="enlarge-btn">
+      <i class="fa-solid fa-sliders"></i>
+    </button>
+
+    <!-- [部品3] モーダルの中身 -->
+    <div class="modal-contents-container">
+      <fieldset class="radio-field" id="change-theme">
+        <legend> テーマを変更 </legend>
+        <label><input type="radio" name="dark-mode" value="normal"> NORMAL    </label>
+        <label><input type="radio" name="dark-mode" value="dark"  > DARK MODE </label>
+      </fieldset>
+    </div>
+
+  </div>

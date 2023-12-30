@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- "font awesome": '≡', '✕'マークの読み込み元 -->
+  <script src="https://kit.fontawesome.com/a6578f7748.js" crossorigin="anonymous"></script>
+  <!-- 見出しの英字font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica">
+
+  <!-- 簡易resetと共通部分 -->
+  <link rel="stylesheet" href="../commonForDemo.css">
+  <!-- テーマ切り替え用 -->
+  <link rel="stylesheet" href="theme.css">
+  <!-- メインのスタイルシート -->
+  <link rel="stylesheet" href="style.css">
+
+  <title> Demo | MODAL WINDOW </title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1 class="header-heading"> Demo for MODAL WINDOW </h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="section-title"> Section Title 1 </h2>
+      <div class="contents">
+        <p>
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+        </p>
+        <img class="racoon-img" src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=" alt="アライグマの画像">
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title"> Section Title 2 </h2>
+      <div  class="contents">
+        <p>
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+        </p>
+        <img class="racoon-img" src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=" alt="アライグマの画像">
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title"> Section Title 3 </h2>
+      <div  class="contents">
+        <p>
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+        </p>
+        <img class="racoon-img" src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=" alt="アライグマの画像">
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title"> Section Title 4 </h2>
+      <div  class="contents">
+        <p>
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+          Dummy Text. Dummy Text. Dummy Text. Dummy Text. Dummy Text.
+        </p>
+        <img class="racoon-img" src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI=" alt="アライグマ">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <h3 class="footer-headding"> FOOTER </h3>
+      <nav class="footer-links">
+        <ul>
+          <li><a href="#"> HOME    </a></li>
+          <li><a href="#"> ABOUT   </a></li>
+          <li><a href="#"> CONTACT </a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+
+  <!-- モーダル -->
+  <div class="modal minimized"> <!-- 初期状態を最小化にしたければ、"minimized"クラスをつけておく -->
+    <!-- [部品1] 展開時の bar 部分 -->
+    <div class="modal-bar">
+      <p class="modal-title"> 設定 </p>
+      <div class="bar-btns">
+        <!-- 最小化ボタン -->
+        <button id="minimize-btn">
+          <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+        </button>
+        <!-- 移動可能アイコン -->
+        <button class="movable-btn">
+          <i class="fa-solid fa-arrows-up-down-left-right" ></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- [部品2] 設定(展開)ボタン -->
+    <button id="enlarge-btn">
+      <i class="fa-solid fa-sliders"></i>
+    </button>
+
+    <!-- [部品3] モーダルの中身 -->
+    <div class="modal-contents-container">
+      <fieldset class="radio-field" id="change-theme">
+        <legend> テーマを変更 </legend>
+        <label><input type="radio" name="dark-mode" value="normal"> NORMAL    </label>
+        <label><input type="radio" name="dark-mode" value="dark"  > DARK MODE </label>
+      </fieldset>
+    </div>
+  </div>
+
+
+  <!-- メインスクリプト -->
+  <script src="main.js"></script>
+  <!-- テーマ切り替え用 -->
+  <script src="changeTheme.js"></script>
+</body>
+</html>

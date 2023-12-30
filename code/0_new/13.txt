@@ -1,0 +1,33 @@
+/* マーカー共通      */
+mark { padding: 0 .3rem }
+/* シンプルマーカー: 個別  */
+mark.simple-1 { background: linear-gradient(transparent 50%,                   #ccc 50% 100%) }
+mark.simple-2 { background: linear-gradient(transparent 50%, rgba(215 160  80 / .5) 50% 100%) }
+mark.simple-3 { background: linear-gradient(transparent 50%, rgba(  0 100 140 / .5) 50% 100%) }
+mark.simple-4 { background: linear-gradient(transparent 50%, rgba(200 200   0 / .5) 50% 100%) }
+mark.simple-5 { background: linear-gradient(transparent 50%, rgba(128   0 128 / .5) 50% 100%) }
+mark.simple-6 { background: linear-gradient(transparent 50%, rgba(165  42  42 / .5) 50% 100%) }
+
+/* ストライプマーカー: 共通 */
+mark[class^="stripe-"] {
+  background-repeat: no-repeat; background-position: left bottom; background-size: 100% 50%
+}
+/* ストライプマーカー: 個別 */
+mark.stripe-1 {
+  background-image: repeating-linear-gradient(-45deg,                   #ccc 0 1.25px, transparent 1.25px 3px);
+}
+mark.stripe-2 {
+  background-image: repeating-linear-gradient(-45deg, rgba(215 160  80 / .5) 0 1.25px, transparent 1.25px 3px);
+}
+mark.stripe-3 {
+  background-image: repeating-linear-gradient(-45deg, rgba(  0 100 140 / .5) 0 1.25px, transparent 1.25px 3px);
+}
+mark.stripe-4 {
+  background-image: repeating-linear-gradient(-45deg, rgba(200 200   0 / .5) 0 1.25px, transparent 1.25px 3px);
+}
+mark.stripe-5 {
+  background-image: repeating-linear-gradient(-45deg, rgba(128   0 128 / .5) 0 1.25px, transparent 1.25px 3px);
+}
+mark.stripe-6 {
+  background-image: repeating-linear-gradient(-45deg, rgba(165  42  42 / .5) 0 1.25px, transparent 1.25px 3px);
+}

@@ -1,0 +1,20 @@
+/* --- 開閉ボタン部分 --------------------------------------------------------------------- */
+/* ボタンを画面右上に固定 */
+button#menu-btn {
+  position: fixed;
+  position: -webkit-fixed; /* fixed 未対応ブラウザ用 */
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+  /* その他のスタイル */
+  width: var(--menu-btn-diameter);
+  height: var(--menu-btn-diameter);
+  margin: var(--menu-btn-margin);
+  background: #eee;
+  border-radius: 50%;
+}
+/* showクラスでアイコンを切り替え */
+i.fa-bars,      i.fa-xmark      { display: none  }
+i.fa-bars.show, i.fa-xmark.show { display: block }
+/* ---------------------------------------------------------------------------------------- */

@@ -1,0 +1,18 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-regular fa-circle-check"></i>
+    NOT IMPORTANT
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph">
+        本文は段落ごとにp.note-paragraphの中に入れる。
+      </p>
+      <p class="note-paragraph">
+        これは第二パラグラフ。だみーてきすと。Dummy Text. ダミーテキスト。
+      </p>
+    </section>
+  </div>
+</section>

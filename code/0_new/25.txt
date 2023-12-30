@@ -1,0 +1,25 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <span class="note-icon material-symbols-outlined">link</span>LINK
+  </h5>
+
+  <div class="note-contents">
+    <div class="note-content">
+
+      <ul>
+        <li>
+          <a class="ref-content" target="_blank" href="../index.html">
+            <i class="fa-solid fa-newspaper"></i>
+            <p class="ref-title"> MEMORARiUM | HOME (内部リンクのロゴはfa-newspaperで) </p>
+          </a>
+        </li>
+        <li>
+          <a class="ref-content" target="_blank" href="https://mrd-web.com/codeprettify">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            <p class="ref-title"> GitHub: code-prettify </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

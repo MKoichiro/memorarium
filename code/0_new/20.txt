@@ -1,0 +1,41 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-solid fa-list-ul"></i> How to Insert List 2
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph">
+        ol.note-list-container[data-list-style-type="lower-roman"]を挿入。
+      </p>
+      <ol class="note-list-container" data-list-style-type="lower-roman"> <!-- ← ココから -->
+        <li class="note-list">
+          <div class="note-list-item">
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+        <li class="note-list">
+          <div class="note-list-item">
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+      </ol>
+      <p class="note-paragraph">
+        data-list-style-type="upper-roman"の指定で大文字のローマ数字に、
+        "lower(upper)-alpha"の指定で小文字(大文字)のアルファベット、
+        無指定または"arabic"の指定で、list-style-typeをのアラビア数字にできる。
+      </p>
+    </section>
+  </div>
+</section>

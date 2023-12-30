@@ -1,0 +1,72 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-solid fa-stairs"></i> STEPs
+  </h5>
+  <hr class="note-underline">
+  
+  <div class="note-contents">
+    <section class="note-content">
+      <ol class="note-list-container" data-list-style-type="lower-roman" data-container-type="step">
+
+        <li class="note-list">
+          <div class="note-list-item">
+            <span class="step-dotted-line"></span>
+            <div class="note-list-title">
+              手順小見出し1: アコーディオン無し
+            </div>
+            <div class="step-detail-container">
+              <div class="step-detail">
+                <p>
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="note-list">
+          <div class="note-list-item acc show">
+            <span class="step-dotted-line"></span>
+            <div class="note-list-title">
+              手順小見出し2: アコーディオン有り
+            </div>
+            <div class="step-detail-container">
+              <div class="step-detail">
+                <p>
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="note-list">
+          <div class="note-list-item acc">
+            <span class="step-dotted-line"></span>
+            <div class="note-list-title">
+              手順小見出し3: この部分は、<br>
+              2行程度に収めるのがいいと思う。
+            </div>
+            <div class="step-detail-container">
+              <div class="step-detail">
+                <p>
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                  だみーてきすと。Dummy Text. ダミーテキスト。
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+:root {
+  /* header, footer の高さ */
+  --header-height: 15rem;
+  --footer-height: 50rem;
+
+  /* aside 関連 */
+  --nav-padding: 1.6rem;
+  --menu-heading-height: 5rem;
+  /* aside のうちul以外の高さ */
+  --menu-lists-net-margin: calc(var(--nav-padding) * 2 + var(--menu-heading-height));
+}
+
+/* main.jsから.off-animeを着脱: 一時的に全transitionアニメをオフに */
+body.off-anime * {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* header > div.header-container, footer > div.footer-container */
+.header-container,
+.footer-container {
+  transform: translateX(0);
+  transition: transform 1000ms;
+}
+.menu-opened .header-container,
+.menu-opened .footer-container {
+  transform: translateX(-15vw);
+}
+
+/* main */
+main {
+  display: flex;
+  margin-top: 0;
+  width: 100%;
+  overflow-x: clip;
+  margin-bottom: 0;
+}
+/* article: 本文 */
+main article {
+  padding: 3.2rem 0;
+  min-width: 60%;
+  margin-bottom: 0;
+  margin-left: 20%;
+  transition: margin-left 1000ms;
+}
+.menu-opened article { margin-left: 5% }
+
+/* aside: メニューのコンテナ */
+aside {
+  min-width: 30%;
+  background: var(--bg-color-aside);
+  color: var(--color-aside);
+}
+
+/* nav.menu */
+.menu {
+  position: sticky;
+  position: -webkit-sticky;
+    top: 0;
+  padding: 1.6rem;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.menu-opened .menu { opacity: 1 }
+.menu-opened .menu.in-footer { bottom: 0 }
+
+/* h3.menu-heading: "MENU"の文字 */
+.menu-heading {
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+  letter-spacing: .16rem;
+}
+
+/* ul.menu-lists */
+.menu-lists {
+ height: calc(100dvh - var(--menu-lists-net-margin));
+ overflow-y: scroll;
+ overscroll-behavior: none;
+ /* background: #555; */
+ -ms-overflow-style: none;       /* scroll barを非表示: IE / ME */  
+ scrollbar-width: none;          /* scroll barを非表示: Firefox */
+}
+.menu-lists::-webkit-scrollbar { /* scroll barを非表示: Chrome, Safari */
+  display:none;
+}
+
+/* li以下の子孫 */
+.menu-lists li + li {
+  border-top: .1rem solid var(--color-aside);
+}
+.menu-lists a {
+  display: block;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  padding: 0 1.6rem;
+
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-lists a:hover {
+  background: #bbb;
+}
+
+/* button#menu-btn */
+#menu-btn {
+  display: block;
+  position: sticky;
+  position: -webkit-sticky;
+    top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  min-width: 20%;
+  cursor: pointer;
+  transition: background-color 1000ms, min-width 1000ms;
+  font-size: 2.4rem;
+}
+#menu-btn:hover { background: #bbb }
+.menu-opened #menu-btn { min-width: 5% }
+
+/* span.menu-txt: ボタンの "MENU" の文字(PCのみ) */
+.menu-txt {
+  display: inline-block;
+  width: 6rem;
+  overflow-x: clip;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .16rem;
+  transition: width 1000ms;
+}
+.menu-opened .menu-txt { width: 0 }
+
+/* "<"の i 要素 */
+#menu-btn i { transition: transform 1000ms }
+/* 左右反転 */
+.menu-opened #menu-btn i { transform: scale(-1, 1) }
+
+
+@media (max-width: 1024px) {
+  /* 1rem を調整 */
+  html { font-size: 50% }
+
+  .header-container,
+  .footer-container { width: 90% }
+  .menu-opened .header-container,
+  .menu-opened .footer-container { transform: translateX(0) }
+
+  main {
+    overflow-x: clip;
+    width: 95%;
+    gap: 5%;
+    margin: 0 0 0 5%;
+  }
+
+  main article {
+    min-width: 90vw;
+    margin-left: 0;
+    transition: min-width 1000ms;
+  }
+  .menu-opened article {
+    min-width: 60vw;
+    margin-left: 0;
+  }
+
+  /* ボタンは丸くして右上に配置 */
+  #menu-btn {
+    display: block;
+    position: fixed;
+    position: -webkit-fixed;
+     top: 0;
+     right: 0;
+     z-index: 50;
+    background: rgba(255 255 255 / .5);
+    min-width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: 2.4rem;
+
+    font-size: 2.4rem;
+    box-shadow: #666 0px 1px 4px;
+  }
+  .menu-opened #menu-btn { min-width: 6rem }
+
+  /* ボタンの "MENU" 文字は非表示 */
+  .menu-txt { display: none }
+}
+
+
+@media (max-width: 600px) {
+  /* 1rem を調整 */
+  html { font-size: 40% }
+
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* menu を画面全体に展開 */
+  main aside {
+    position: fixed;
+    position: -webkit-fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    background: rgba(  0   0   0 / .7);
+    min-width: 100%;
+    height: 100lvh;
+    color: #eee;
+    transform: translateX(100%);
+    transition: transform 1000ms;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  .menu-opened aside { transform: translateX(0) }
+
+}

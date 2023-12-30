@@ -1,0 +1,20 @@
+<section class="note-container acc">   <!-- ココに acc (とshow)クラス  -->
+  <h5 class="note-text for-pen-anime"> <!-- ココに for-pen-animeクラス -->
+    <i class="note-icon fa-solid fa-pen-fancy"></i> ACCORDION
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph">
+        section.note-containerに.accクラスを付ければ良い。
+        開閉は.showクラスの着脱で制御しており、
+        初期状態は同要素に.showを付けておくか外しておくかで指定できる。
+      </p>
+      <p class="note-paragraph">
+        なお、h5.note-textに.for-pen-animeクラスをつけるとアニメーションが付く。
+        他のアニメーションは未作成。
+      </p>
+    </section>
+  </div>
+</section>

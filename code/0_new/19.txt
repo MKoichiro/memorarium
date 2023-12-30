@@ -1,0 +1,40 @@
+<section class="note-container">
+  <h5 class="note-text">
+    <i class="note-icon fa-solid fa-list-ul"></i> How to Insert List 1
+  </h5>
+  <hr class="note-underline">
+
+  <div class="note-contents">
+    <section class="note-content">
+      <p class="note-paragraph">
+        ul.note-list-container[data-list-style-type="--"]を挿入。
+      </p>
+      <ul class="note-list-container" data-list-style-type="--">  <!-- ← ココから -->
+        <li class="note-list">
+          <div class="note-list-item">
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+        <li class="note-list">
+          <div class="note-list-item">
+            <p>
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+              だみーてきすと。Dummy Text. ダミーテキスト。
+            </p>
+          </div>
+        </li>
+      </ul>
+      <p class="note-paragraph">
+        小見出し無しのシンプルな箇条書きの場合は以上のように書く。
+        data-list-style-typeを指定しない、またはdata-list-style-typeに""を指定すると左に3remの余白だけ確保される。
+      </p>
+    </section>
+  </div>
+</section>
