@@ -47,7 +47,7 @@ const resizeDelay = 1000 / 60; // 60fps
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 let artInfoJson;
 const getArtInfo = async () => {
-  const artInfoUrl = "../data/articleInfo.json";
+  const artInfoUrl = "https://mkoichiro.github.io/memorarium/data/articleInfo.json";
   const response = await fetch(artInfoUrl);
   if (response.ok) { 
     artInfoJson = await response.json();
