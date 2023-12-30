@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font: 'Economica' -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica">
+  <!-- icon: link        -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- font awesome      -->
+    <script src="https://kit.fontawesome.com/a6578f7748.js" crossorigin="anonymous"></script>
+  <!-- stylesheets       -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="../css/prettify.css">
+  <!-- favicon          -->
+    <link id="favicon" rel="shortcut icon" href="../img/favicon/favicon1.png" type="image/x-icon">
+  
+  <!-- articleInfo.jsonで 参照する記事の ID を new.mjs に渡す -->
+    <script>const articleId = 1, relatedArtIds = [0, 1, 5, 3], codeDir = 'code/1_d-menu';</script>
+  <!-- header, footer, asede など -->
+    <script type="module" src="../js/common.mjs"></script>
+  <!-- txtファイル読み込みの非同期処理 -->
+    <script type="module" src="../js/readCodeTxt.mjs"></script>
+  <!-- main module -->
+    <script type="module" src="../js/new.mjs"></script>
+
+  <title>MEMORARiUM | New Article</title>
+</head>
+
+<body class="off-anime loading">
+
+  <header id="top">
+    <div id="bubbles-bg-container">
+      <div class="header-container">
+        <a href="../html/index.html" id="header-logo">
+          <img src="../img/favicon/favicon1.png" alt="">
+          <h1>MEMORARiUM</h1>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="main-contents-container">
+      <article class="main-article">
+
+        <h1 id="title">
+          <!-- <mark class="simple-1"> 記事タイル </mark> -->
+        </h1>
+        <div class="date-line">
+          <hr><time class="date" id="this-art-date"><!-- [ 20XX.XX.XX ] --></time><hr>
+        </div>
+        <p class="paragraph" id="intro">
+          <!-- 【new.mjs, articleInfo.json】イントロの記述 -->
+        </p>
+        <section id="outline-acc-container">
+          <div class="outline-bar">
+            <h4 class="outline-text"><i class="fa-solid fa-bookmark"></i>OUTLINE</h4>
+          </div>
+          <!-- new.mjs から ul 要素を生成 -->
+          <div class="outline-bar">
+            <a id="outline-btn" href="#outline-acc-container">
+              <i class="fa-solid fa-chevron-up"></i>
+              <span id="open-text" > OPEN  </span>
+              <span id="close-text"> CLOSE </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="chapter" id="chapter0">
+          <a class="chapter-title-container" href="#chapter0">
+            <h2 class="chapter-title">前書き</h2>
+          </a>
+          <section class="chapter-contents-container">
+            <p class="paragraph">
+              以前作ってみたときにつまずいたので、今一度書いてみる。
+              かなり基本的なUIだけれども、ちゃんと書こうとするとイレギュラーな対応が必要なところがあった。
+            </p>
+            <p class="paragraph">
+              デモページを別タブで開きたいときはこちら。
+            </p>
+            <section class="note-container">
+              <h5 class="note-text">
+                <span class="note-icon material-symbols-outlined">link</span> LINK
+              </h5>
+              <div class="note-contents">
+                <div class="note-content">
+                  <ul>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index0.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | 完成版 </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index1.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | ver.1 </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index2.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | ver.2 </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index3.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | ver.3 </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index4.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | ver.4 </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+
+        <div class="to-top-container">
+          <a href="#top" class="to-top">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            to Top
+          </a>
+        </div>
+        <hr class="separater">
+
+
+        <section class="chapter" id="chapter1">
+          <a class="chapter-title-container" href="#chapter1">
+            <h2 class="chapter-title"> 完成版 </h2>
+          </a>
+          <section class="chapter-contents-container">
+            <p class="paragraph">
+              まず、完成版は以下の通り。右上の"≡"をクリックすると、
+              アイコンは"X"に変化し、画面右からドロワーメニューが現れ、本文にぼかしがかかる。
+              "X"または、背景部分をクリックして閉じることができる、よく見るUI。
+            </p>
+            <section class="note-container">
+              <h5 class="note-text">
+                <i class="note-icon fa-solid fa-list-ol"></i> POINT
+              </h5>
+              <hr class="note-underline">
+
+              <div class="note-contents">
+                <section class="note-content">
+                  <ol class="note-list-container" data-list-style-type="arabic">
+                    <li class="note-list">
+                      <div class="note-list-item">
+                        <p>
+                          右上の"≡"をクリックすると"X"に変化し、
+                          画面右からドロワーメニューが現れ、
+                          本文にはぼかしがかかる。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="note-list">
+                      <div class="note-list-item">
+                        <p>
+                          "X"または、背景部分をクリックして閉じる。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="note-list">
+                      <div class="note-list-item">
+                        <p>
+                          メニュー開閉アイコンは右上に固定。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="note-list">
+                      <div class="note-list-item">
+                        <p>
+                          メニューが開いているときには本文のスクロールは禁止し、
+                          メニューのコンテンツが多くはみ出す場合、メニュー内のみスクロール可能する。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="note-list">
+                      <div class="note-list-item">
+                        <p>
+                          メニューを開くことでページがトップまで強制スクロールされてしまうことのないようにする。
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+
+                </section>
+              </div>
+            </section>
+            <section class="code-prettify-container">
+              <nav class="lang-type-tabs">
+                <button class="lang-type-tab active"> index.html          </button>
+                <button class="lang-type-tab"       > style.css           </button>
+                <button class="lang-type-tab"       > main.js             </button>
+                <button class="lang-type-tab"       > (commonForTest.css) </button>
+              </nav>
+
+              <div class="code-prettify-contents">
+                <div class="code-prettify-content active">
+                  <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                  <pre><code class="prettyprint linenums" data-pp-highlight=""></code></pre>
+                </div>
+
+                <div class="code-prettify-content">
+                  <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                  <pre><code class="prettyprint linenums lang-css"  data-pp-highlight=""></code></pre>
+                </div>
+
+                <div class="code-prettify-content">
+                  <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                  <pre><code class="prettyprint linenums"  data-pp-highlight=""></code></pre>
+                </div>
+
+                <div class="code-prettify-content">
+                  <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                  <pre><code class="prettyprint linenums lang-css"  data-pp-highlight=""></code></pre>
+                </div>
+
+                <a class="enlarge-btn">
+                  <i class="fa-solid fa-chevron-up"></i>
+                  <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                </a>
+
+              </div>
+
+            </section>
+
+            <section class="output-container">
+              <nav class="output-tabs">
+                <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+              </nav>
+              <div class="output-contents">
+                <div class="output-content active">
+                  <iframe src="../demo/1_d-menu/index0.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                </div>
+              </div>
+            </section>
+
+            <section class="note-container">
+              <h5 class="note-text">
+                <span class="note-icon material-symbols-outlined">link</span> LINK
+              </h5>
+              <div class="note-contents">
+                <div class="note-content">
+                  <ul>
+                    <li>
+                      <a class="ref-content" target="_blank" href="../demo/1_d-menu/index0.html">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <p class="ref-title"> Demo for DRAWER MENU | 完成版 </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+
+
+          </section>
+        </section>
+
+        <div class="to-top-container">
+          <a href="#top" class="to-top">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            to Top
+          </a>
+        </div>
+        <hr class="separater">
+
+        <section class="chapter" id="chapter2">
+          <a class="chapter-title-container" href="#chapter2">
+            <h2 class="chapter-title"> とりあえず書いてみつつ解説 </h2>
+          </a>
+          <section class="chapter-contents-container">
+            <section class="subchapter" id="subchapter2-1">
+              <a class="subchapter-title-container" href="#subchapter2-1">
+                  <h3 class="subchapter-title"> HTMLは簡単 </h3>
+              </a>
+              <section class="subchapter-contents-container">
+                <p class="paragraph">
+                  HTMLは以下の通り。
+                  特に難しいところはない、はず。
+                  必要な部品は
+                  <mark class="stripe-4">
+                  <span class="show-code"><code class="inline-code"> aside </code></span>
+                  、背景をぼかすための空の
+                  <span class="show-code"><code class="inline-code"> div.mask </code></span>
+                  、開閉ボタンの
+                  <span class="show-code"><code class="inline-code"> button#menu-btn </code></span>
+                  の3つ。
+                  body直下のheaderやmainと同階層に、
+                  これらを配置する。
+                  </mark>
+                  のちにそれぞれ
+                  <span class="show-code"><code class="inline-code"> position: fixed; </code></span>
+                  と
+                  <span class="show-code"><code class="inline-code"> z-index </code></span>
+                  を指定するので一応、順不同で大丈夫。
+                  asideタグ内に
+                  <span class="show-code"><code class="inline-code"> nav.menu </code></span>
+                  、さらにその中に
+                  <span class="show-code"><code class="inline-code"> ul.menu-lists </code></span>
+                  及び、
+                  <span class="show-code"><code class="inline-code"> li </code></span>
+                  要素を入れてメニュー部分を生成する。
+                  また、button内にはそれぞれ"≡"と"X"アイコンを表示する
+                  <span class="show-code"><code class="inline-code"> i </code></span>
+                  タグが入る。
+                  なお、これらのアイコンは今回はfont awesomeから読み込んでいる。
+                </p>
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab"       > index.html (outline) </button>
+                    <button class="lang-type-tab active"> index.html (body)    </button>
+                  </nav>
+
+                  <div class="code-prettify-contents">
+
+                    <div class="code-prettify-content">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums"></code></pre>
+                    </div>
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums"></code></pre>
+                    </div>
+
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                    </a>
+                  </div>
+                </section>
+
+              </section>
+            </section>
+
+            <section class="subchapter" id="subchapter2-2">
+              <a class="subchapter-title-container" href="#subchapter2-2">
+                  <h3 class="subchapter-title"> CSSとJavaScriptを書いてみる </h3>
+              </a>
+              <section class="subchapter-contents-container">
+                <p class="paragraph">
+                  ササっと書いてみたのが以下のCSS。
+                  asideの幅は画面半分(
+                  <span class="show-code"><code class="inline-code"> width: 50%; </code></span>
+                  )とし、
+                  これを
+                  <span class="show-code"><code class="inline-code"> position: fixed; </code></span>
+                  、
+                  <span class="show-code"><code class="inline-code"> top: 0; </code></span>
+                  、
+                  <span class="show-code"><code class="inline-code"> right: 0; </code></span>
+                  で画面右に表示。
+                  普段は画面右の外に出しておきたいので、
+                  <span class="show-code"><code class="inline-code"> transform: translateX(100%); </code></span>
+                  で右にちょうど自身の幅分移動しておく。
+                  開閉は
+                  <span class="show-code"><code class="inline-code"> show </code></span>
+                  クラスの着脱で制御(main.js)。
+                  よって、aside.showには、
+                  <span class="show-code"><code class="inline-code"> transform: translateX(0); </code></span>
+                  を指定して、showクラスがつくと画面内に戻ってくるようにしている。
+                </p>
+                <p class="paragraph">
+                  div.maskもshowクラスの着脱で(非)表示を切り替えている。
+                  単純に
+                  <span class="show-code"><code class="inline-code"> display: none/block; </code></span>
+                  の切り替えでもよいが、
+                  今回は
+                  <span class="show-code"><code class="inline-code"> opacity: 0/1; </code></span>
+                  で代替して、アニメ付きで(非)表示が切り替わるようにした。
+                  ただし、
+                  <span class="show-code"><code class="inline-code"> pointer-events: none/auto; </code></span>
+                  も同時に設定しないと、常にクリックイベントが発生してしまうので注意。
+                </p>
+                <p class="paragraph">
+                  次にbutton#menu-btn要素。
+                  最初に表示しておきたいのは、
+                  <span class="show-code"><code class="inline-code"> &lt;i class="fa-solid fa-bars">&lt;/i> </code></span>
+
+                  <code></code>
+                  の"≡"マークの方だから、index.htmlではこちらにshowクラスを付けておく。
+                  buttonに関するcssでやっていることは、
+                  showの着脱でマークが切り替わるようにしているだけ。
+                </p>
+                <p class="paragraph">
+                  なお、
+                  <span class="show-code"><code class="inline-code"> z-index </code></span>
+                  は、button#menu-btnが一番上で3、その下のasideが2、さらにその下のdiv.maskが1とすれば、
+                  意図した重なり順になる。
+                </p>
+                <p class="paragraph">
+                  main.js。
+                  aside、div.mask、buttonの中の2つのi要素、の4つの要素を取得し、
+                  button要素のクリックでこれらに対してshowクラスの着脱を実行する。
+                  今回は背景部分のクリックでもメニューを閉じさせたいが、
+                  これは、div.maskにも同じイベントリスナーを登録しておけばよい。
+                </p>
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab active"> style.css (all)                 </button>
+                    <button class="lang-type-tab"       > style.css (aside/ul.menu-lists) </button>
+                    <button class="lang-type-tab"       > style.css (div.mask)            </button>
+                    <button class="lang-type-tab"       > style.css (button)              </button>
+                    <button class="lang-type-tab"       > main.js                         </button>
+                  </nav>
+
+                  <div class="code-prettify-contents">
+                    
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css"></code></pre>
+                    </div>
+                    <div class="code-prettify-content">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css"></code></pre>
+                    </div>
+                    <div class="code-prettify-content">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css"></code></pre>
+                    </div>
+                    <div class="code-prettify-content">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css"></code></pre>
+                    </div>
+                    <div class="code-prettify-content">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css"></code></pre>
+                    </div>
+
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                    </a>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  すると、こんな感じ。
+                </p>
+
+                <section class="output-container">
+                  <nav class="output-tabs">
+                    <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+                  </nav>
+                  <div class="output-contents">
+                    <div class="output-content active">
+                      <iframe src="../demo/1_d-menu/index1.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <span class="note-icon material-symbols-outlined">link</span> LINK
+                  </h5>
+                  <div class="note-contents">
+                    <div class="note-content">
+                      <ul>
+                        <li>
+                          <a class="ref-content" target="_blank" href="../demo/1_d-menu/index1.html">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <p class="ref-title"> Demo for DRAWER MENU | ver.1 </p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  概ねできているようにみえるが、まだまだ問題がある。
+                  メニューを開いて、ぼやけた背景部分をスクロールすると、
+                  後ろの本文がスクロールされてしまう。
+                  また、メニュー部分はコンテンツがオーバーフローしているので、
+                  スクロールできてよいのだが、
+                  スクロール端に達したあとさらにスクロールすると、
+                  やはり後ろの本文がスクロールされてしまう。
+                  今回は完成版でみたように本文は固定したい。
+                </p>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <i class="note-icon fa-solid fa-list-ol"></i> PROBLEMS
+                  </h5>
+                  <hr class="note-underline">
+        
+                  <div class="note-contents">
+                    <section class="note-content">
+                      <ol class="note-list-container" data-list-style-type="arabic">
+                        <li class="note-list">
+                          <div class="note-list-item">
+                            <p>
+                              div.mask(ぼやけた背景部分)をスクロールすると、
+                              後ろの本文がスクロールされてしまう。
+                            </p>
+                          </div>
+                        </li>
+                        <li class="note-list">
+                          <div class="note-list-item">
+                            <p>
+                              aside("MENU"の文字から上の部分)をスクロールすると、
+                              後ろの本文がスクロールされてしまう。
+                            </p>
+                          </div>
+                        </li>
+                        <li class="note-list">
+                          <div class="note-list-item">
+                            <p>
+                              ul.menu-lists (メニューのリスト部分)をスクロールしてゆき、
+                              端に達したあとさらにスクロールすると、
+                              後ろの本文がスクロールされてしまう。
+                              (スクロールチェーンが発生する。)
+                            </p>
+                          </div>
+                        </li>
+                      </ol>
+                    </section>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  ※ この問題の解決策としてよく示されているものに、
+                  メニューを開くタイミングで、
+                  <span class="show-code"><code class="inline-code"> html </code></span>
+                  要素や
+                  <span class="show-code"><code class="inline-code"> body </code></span>
+                  要素に
+                  <span class="show-code"><code class="inline-code"> height: 100%; </code></span>
+                  をなどと指定したりするものがある。
+                  しかし、こうした方法ではメニューを開いたときにスクロール位置が強制的にページ先頭に戻されてしまう。
+                  ページが短く、スクロールが発生しない場合にはこれでいいかもしれないが、
+                  そうでない限り少し不便なので、今回は別のアプローチで解決を試みる。
+                </p>
+
+              </section>
+            </section>
+            
+
+          </section>
+        </section>
+
+        <div class="to-top-container">
+          <a href="#top" class="to-top">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>to Top
+          </a>
+        </div>
+        <hr class="separater">
+
+
+        <section class="chapter" id="chapter3">
+          <a class="chapter-title-container" href="#chapter3">
+            <h2 class="chapter-title"> 改修作業 </h2>
+          </a>
+          <section class="chapter-contents-container">
+
+            <section class="subchapter" id="subchapter3-1">
+              <a class="subchapter-title-container" href="#subchapter3-1">
+                <h3 class="subchapter-title"> CSS、JavaScriptの改修1: マスクとメニュー内のスクロールを禁止</h3>
+              </a>
+              <section class="subchapter-contents-container">
+                <p class="paragraph">
+                  まず、div.mask部分のスクロールを禁止する。
+                  スクロール動作を司るのは、JavaScriptの
+                  <span class="show-code"><code class="inline-code"> 'wheel' </code></span>
+                  イベント(マウスホイール操作)、と
+                  <span class="show-code"><code class="inline-code"> 'touchmove' </code></span>
+                  イベント(mobile端末の画面タッチ操作)。
+                  これらが発生したときのデフォルトの動作(つまりスクロール)を、
+                  <span class="show-code"><code class="inline-code"> event.preventDefault() </code></span>
+                  でキャンセルすればよい。
+                  メニューを開いた時に'wheel'と'touchmove'の両方について、イベントリスナーを登録。
+                  逆に閉じるときに削除する(削除しないと開く度に追加され無限に重複してゆく)。
+                </p>
+                <p class="paragraph">
+                  aside部分のスクロールも基本的には同様に禁止できる。
+                  がしかし、そのままでは子要素のul.menu-listsもスクロールできなくなってしまう。
+                  これはイベントが子要素に伝搬することが原因なので、
+                  <span class="show-code"><code class="inline-code"> event.stopPropagation() </code></span>
+                  で伝搬を阻止する必要がある。
+                  今回の場合、追加でulに適当なイベントリスナーを登録してる。
+                  なお、aside、ulについてはメニューの開閉によらず最初に一度これらのイベントリスナーを登録すればよい。
+                </p>
+                <p class="paragraph">
+                  CSSは一旦そのままで...。
+                </p>
+
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab active"> JavaScript </button>
+                  </nav>
+
+                  <div class="code-prettify-contents">
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css" data-pp-highlight="5 14-16 25-34 38-43"></code></pre>
+                    </div>
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                    </a>
+                  </div>
+                </section>
+
+                <section class="output-container">
+                  <nav class="output-tabs">
+                    <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+                  </nav>
+                  <div class="output-contents">
+                    <div class="output-content active">
+                      <iframe src="../demo/1_d-menu/index2.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <span class="note-icon material-symbols-outlined">link</span> LINK
+                  </h5>
+                  <div class="note-contents">
+                    <div class="note-content">
+                      <ul>
+                        <li>
+                          <a class="ref-content" target="_blank" href="../demo/1_d-menu/index2.html">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <p class="ref-title"> Demo for DRAWER MENU | ver.2 </p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  これでmask部分やaside部分("MENU"から上の部分で確認)をスクロールしても、
+                  後ろの本文がスクロールされることはなくなった。
+                  しかし、実はこれだけではまだul.menu-lists部分で、
+                  スクロール端に達したあと、さらにスクロールしたときに、
+                  後ろの本文がスクロールされてしまう問題がなお解決できていない。
+                </p>
+
+              </section>
+
+            </section>
+
+            <section class="subchapter" id="subchapter3-2">
+              <a class="subchapter-title-container" href="#subchapter3-2">
+                <h3 class="subchapter-title"> CSS、JavaScriptの改修2: スクロールチェーンの回避 </h3>
+              </a>
+              <section class="subchapter-contents-container">
+                <p class="paragraph">
+                  調べると、ちょうど同じ問題を扱っているサイトがあった。
+                  どうやらスクロール端を超えてスクロールしたときに親要素がスクロールする現象には、
+                  スクロールチェーンなる名前が付いているらしい。
+                  スクロールチェーン回避の最近の方法は簡単で、
+                  CSSに
+                  <span class="show-code"><code class="inline-code"> overflow: scroll; </code></span>
+                  とともに、
+                  <span class="show-code"><code class="inline-code"> overscroll-behavior: none(またはcontain); </code></span>
+                  を指定する。
+                  noneとcontainの違いは、簡単に言うとnoneだとスクロールバウンスまで消せるということらしい。
+                  今回は、
+                  <span class="show-code"><code class="inline-code"> overscroll-behavior: none; </code></span>
+                  をul.menu-listsのスタイルに指定した。
+                </p>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <span class="note-icon material-symbols-outlined">link</span> LINK
+                  </h5>
+                  <div class="note-contents">
+                    <div class="note-content">
+                      <ul>
+                        <li>
+                          <a class="ref-content" target="_blank" href="https://coliss.com/articles/build-websites/operation/css/prevent-scroll-chaining-overscroll-behavior.html">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <p class="ref-title"> CSSでスクロールが連鎖するのを回避する古い方法とoverscroll-behaviorを使った新しいテクニック </p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab active"> CSS </button>
+                  </nav>
+
+                  <div class="code-prettify-contents">
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css" data-pp-highlight="4-7"></code></pre>
+                    </div>
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                    </a>
+                  </div>
+                </section>
+
+                <section class="output-container">
+                  <nav class="output-tabs">
+                    <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+                  </nav>
+                  <div class="output-contents">
+                    <div class="output-content active">
+                      <iframe src="../demo/1_d-menu/index3.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="note-container acc">
+                  <h5 class="note-text for-pen-anime">
+                    <i class="note-icon fa-solid fa-pen-fancy"></i> NOTE
+                  </h5>
+                  <hr class="note-underline">
+                
+                  <div class="note-contents">
+                    <section class="note-content">
+                      <ul class="note-list-container" data-list-style-type=""> <!-- ← ココから -->
+                        <li class="note-list">
+                          <div class="note-list-item">
+                            <div class="note-list-title">
+                              スクロールバウンス (/ バウンススクロール)
+                            </div>
+                            <p class="note-paragraph">
+                              特にmobile端末などのブラウザでよく見る、端までスクロールしたとき、のコンテンツが弾むような挙動。
+                              また引っ張ってページを更新するときのような、画面外までスクロールできる挙動。
+                              よって、bodyなどに
+                              <span class="show-code"><code class="inline-code"> overscroll-behavior: none; </code></span>
+                              などを指定すると引っ張って更新ができないので避ける。
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                </section>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <span class="note-icon material-symbols-outlined">link</span> LINK
+                  </h5>
+                  <div class="note-contents">
+                    <div class="note-content">
+                      <ul>
+                        <li>
+                          <a class="ref-content" target="_blank" href="../demo/1_d-menu/index3.html">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <p class="ref-title"> Demo for DRAWER MENU | ver.3 </p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  こうして無事完成かと思いきや、実はまだ問題が残っている。
+                  今まで、ul.menu-lists内のli要素はあえて多めにしてオーバーフローさせていたが、
+                  リストアイテムを間引いて、コンテンツがオーバーフローしないようにしてみる。
+                  (用意したデモツールでリスト項目数を変化させて動作を確認できる。)
+                  すると、なんと後ろの本文がスクロールされてしまう。
+                  上で紹介したサイトにも言及があるが、
+                  どうやらこれには正攻法的な解決索がなく、JavaScriptで工夫して解決するしかないらしい。
+                </p>
+
+              </section>
+
+            </section>
+
+            <section class="subchapter" id="subchapter3-3">
+              <a class="subchapter-title-container" href="#subchapter3-3">
+                <h3 class="subchapter-title"> CSS、JavaScriptの改修3: ul内コンテンツのオーバーフローの有無で場合分け </h3>
+              </a>
+              <section class="subchapter-contents-container">
+
+                <p class="paragraph">
+                  そこで、今回は
+                  ul.menu-lists内のコンテンツのオーバーフローを判定 → 
+                  <span class="show-code"><code class="inline-code"> if( ul内コンテンツがオーバーフロー ) { ulのスクロールを解禁 }  </code></span>
+                  の方針で書き足した。
+                  else(つまりオーバーフローしていない場合)については書き足さずとも、
+                  asideに登録したスクロールの禁止がulに伝搬しているので問題ない。
+                  オーバーフロー判定は
+                  「ulの高さ」と「最初のli要素の上端y座標と最後li要素の下端y座標の差」
+                  を比較すればいい。
+
+                </p>
+
+                <p class="paragraph">
+                  具体的には、
+                  <span class="show-code"><code class="inline-code"> hasMenuOverflow関数 </code></span>
+                  内でul内コンテンツのオーバーフローを判定している。
+                  オーバーフローなら
+                  <span class="show-code"><code class="inline-code"> true </code></span>
+                  、非オーバーフローなら
+                  <span class="show-code"><code class="inline-code"> false </code></span>
+                  を返すようにして、
+                  if分の条件式として呼び出している。
+                </p>
+
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab active"> JavaScript </button>
+                  </nav>
+                  <div class="code-prettify-contents">
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css" data-pp-highlight="18-27 52-57"></code></pre>
+                    </div>
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container">
+                        <p class="enlarge-text show">Show All</p>
+                        <p class="reduce-text">Reduce</p>
+                      </div>
+                    </a>
+                  </div>
+                </section>
+
+              <section class="output-container">
+                <nav class="output-tabs">
+                  <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+                </nav>
+                <div class="output-contents">
+                  <div class="output-content active">
+                    <iframe src="../demo/1_d-menu/index4.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                  </div>
+                </div>
+              </section>
+
+              </section>
+
+            </section>
+
+
+            <section class="subchapter" id="subchapter3-4">
+              <a class="subchapter-title-container" href="#subchapter3-4">
+                <h3 class="subchapter-title"> CSS、JavaScriptの改修4: risezeイベントの追加 </h3>
+              </a>
+              <section class="subchapter-contents-container">
+                <p class="paragraph">
+                  最後にユーザーがウィンドウをリサイズした場合に問題があるか考える。
+                  するとひとまず、
+                  ul.menu-lists内のコンテンツがオーバーフローするようになったり、
+                  しないようになったりすることが思いつく。
+                  放っておくと、リサイズの結果ul内のコンテンツがオーバーフローしたのに、
+                  スクロールでリストの下まで確認することができない、という問題が起こる。
+                  対策をmain.jsに書き足した。
+                  <span class="show-code"><code class="inline-code"> 'resize' </code></span>
+                  イベントに下の通り、イベントリスナーを登録しておけばよい。
+                </p>
+                <p class="paragraph">
+                  なお、resizeイベントはリサイズ操作中に連続して頻繁に発火してしまうので、
+                  <span class="show-code"><code class="inline-code"> setTimeout() </code></span>
+                  でリスナー実行までの猶予時間を設けて、間引いている。
+                </p>
+
+                <section class="code-prettify-container">
+                  <nav class="lang-type-tabs">
+                    <button class="lang-type-tab active"> JavaScript </button>
+                  </nav>
+
+                  <div class="code-prettify-contents">
+                    <div class="code-prettify-content active">
+                      <button class="clipboard-btn"><i class="fa-solid fa-clipboard"></i></button>
+                      <pre><code class="prettyprint linenums lang-css" data-pp-highlight="67-83"></code></pre>
+                    </div>
+                    <a class="enlarge-btn">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <div class="enlarge-text-container"><p class="enlarge-text show">Show All</p><p class="reduce-text">Reduce</p></div>
+                    </a>
+                  </div>
+                </section>
+
+                <section class="output-container">
+                  <nav class="output-tabs">
+                    <button class="output-tab active" data-tab-link-id=""> OUTPUT </button>
+                  </nav>
+                  <div class="output-contents">
+                    <div class="output-content active">
+                      <iframe src="../demo/1_d-menu/index0.html" frameborder="0" width="100%" height="500px" sandbox="allow-scripts"></iframe>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="note-container">
+                  <h5 class="note-text">
+                    <span class="note-icon material-symbols-outlined">link</span> LINK
+                  </h5>
+                  <div class="note-contents">
+                    <div class="note-content">
+                      <ul>
+                        <li>
+                          <a class="ref-content" target="_blank" href="../demo/1_d-menu/index0.html">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <p class="ref-title"> Demo for DRAWER MENU | 完成版 </p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <p class="paragraph">
+                  これでようやく完成です。
+                </p>
+              </section>
+
+            </section>
+
+
+          </section>
+        </section>
+
+        <div class="to-top-container">
+          <a href="#top" class="to-top">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            to Top
+          </a>
+        </div>
+        <hr class="separater">
+
+
+        <section class="chapter" id="chapter4">
+          <a class="chapter-title-container" href="#chapter4">
+            <h2 class="chapter-title">まとめ、というより感想やメモ</h2>
+          </a>
+          <section class="chapter-contents-container">
+            <p class="paragraph">
+              少なくともiOSのChromeでは、footer下に余白ができているけれども、
+              これは立派な企業のホームページや、なんならMDNでもそうなっているので、
+              ここでは仕様という便利な言葉で片づけておきます。
+              bodyの中全体をもう1個divで囲うなどの実装もあるようだけれど、
+              なんかイヤなので、今回はそれ無しで書けて満足。
+              そしてoverscroll-behaviorは便利。
+            </p>
+            <p class="paragraph">
+              デモツールモーダルを作るほうが大変だったので、それもまたどこかで書く。
+            </p>
+          </section>
+        </section>
+
+        <div class="end-container">
+          <p class="end-text">END.</p>
+          <a href="#top" class="to-top">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            to Top
+          </a>
+        </div>
+        <hr class="separater final-separater">
+
+      </article>
+
+
+  <div class="not-main-article">
+    <section class="related-container">
+      <h2 class="related-text">RELATED ARTICLE</h2>
+      <ul id="related-ul">
+        <!-- new.mjs から li 要素を生成 -->
+      </ul>
+    </section>
+  </div>
+
+    </div>
+
+    <!-- サイドメニュー開閉ボタン -->
+    <button id="menu-btn">
+      <img id="img-fish" src="../img/30643.png" alt="サイドメニューの開閉ボタン">
+    </button>
+
+    <!-- サイドメニュー -->
+    <aside>
+      <nav class="menu-nav">
+        <h4 class="menu-title"> MENU </h4>
+        <!-- 第1層 -->
+        <ul class="ul-first-floor">
+          <li><a href="#">About</a></li>
+          <li class="li-first-floor">
+            <button href="#">Programming</button>
+            <!-- 第2層 -->
+            <ul class="ul-second-floor">
+              <li class="li-second-floor">
+                <button>HTML</button>
+                <!-- 第3層 -->
+                <ul class="ul-third-floor">
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                </ul>
+              </li>
+              <!-- <li class="li-second-floor">
+                <button>CSS</button>
+                第3層
+                <ul class="ul-third-floor">
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                </ul>
+              </li>
+              <li class="li-second-floor">
+                <button>JavaScript</button>
+                第3層
+                <ul class="ul-third-floor">
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                </ul>
+              </li>
+              <li class="li-second-floor">
+                <button>PHP</button>
+                第3層
+                <ul class="ul-third-floor">
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                </ul>
+              </li>
+              <li class="li-second-floor">
+                <button>vscode</button>
+                第3層
+                <ul class="ul-third-floor">
+                  <li><a href="#">第一回</a></li>
+                  <li><a href="#">第二回</a></li>
+                  <li><a href="#">第三回</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+        </ul>
+        <h4 class="menu-title"> MENU </h4>
+      </nav>
+    </aside>
+
+  </main>
+
+
+
+  <footer>
+    <div id="aquarium-bg-container">
+
+      <div class="footer-container">
+        <a href="#top" id="footer-logo">
+          <img src="../img/favicon/favicon1.png" width="100" height="100" alt="">
+          <h4>MEMORARiUM</h4>
+        </a>
+        <nav>
+          <ul>
+            <li> <a href="../index.html"> Home   </a> </li>
+            <li> <a href="#"            > About  </a> </li>
+            <li> <a href="#"            >Contact </a> </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 水草生成部分 -->
+      <div id="seaweed-bg">
+        <div class="seaweed">
+          <span class="first"></span><span class="second"></span><span class="third"></span>
+        </div>
+        <div class="seaweed">
+          <span class="first"></span><span class="second"></span><span class="third"></span>
+        </div>
+      </div>
+      <!-- 砂粒生成部分 -->
+      <div id="sand-bg"></div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- code-prettify -->
+  <script src="../js/prettify.js"></script>
+  <script src="../js/lang-css.js"></script>
+</body>
+
+</html>
