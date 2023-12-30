@@ -188,7 +188,7 @@ const carouselSlides = document.querySelector('.slides');
 carouselArtIds.forEach(id => {
   const artInfo  = artObj.filter(  obj  => obj.id  ===             id )[0],
         langInfo = langArr.filter( lang => lang.id === artInfo.langId )[0];
-  const carHref  = `../${ artInfo.href }`;
+  const carHref  = (artInfo.href.matches('http') ? artInfo.href : `../${ artInfo.href }`;
   const liSlide = document.createElement('li');
   liSlide.classList.add('slide');
   liSlide.innerHTML = `<article>
