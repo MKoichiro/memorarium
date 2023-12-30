@@ -59,7 +59,7 @@ const artObj  = artInfoJson.articleInfo;
 const newEntInfo = artObj.filter(artInfo => artInfo.id === newEntryId )[0];
 const newEntLangInfo = langArr.filter(langInfo => langInfo.id === newEntInfo.langId)[0];
 const newEntTitle = document.querySelector('#new-entry-title');
-newEntTitle.innerHTML = `<a href="../${ newEntInfo.href }" class="${ newEntLangInfo.abbreviation }">
+newEntTitle.innerHTML = `<a href="https://mkoichiro.github.io/memorarium/${ newEntInfo.href }" class="${ newEntLangInfo.abbreviation }">
                           <i class="${ newEntLangInfo.iconClassList }"></i>
                           ${ newEntInfo.title.plane }
                          </a>`;
