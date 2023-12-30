@@ -71,7 +71,7 @@ let currentWidth = innerWidth;
 // 記事情報を記述した json を読み込み //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-const artInfoUrl = "../data/articleInfo.json";
+const artInfoUrl = "https://mkoichiro.github.io/memorarium/data/articleInfo.json";
 let artInfoJson;
 const response = await fetch(artInfoUrl);
 if (response.ok) { artInfoJson = await response.json() }
@@ -97,7 +97,7 @@ const relatedUl = document.querySelector('#related-ul');
 relatedArtInfo.forEach(info => {
   const langId      = info.langId;
   const langInfo    = langArr.filter(langInfo => langInfo.id === langId)[0];
-  const href          = (info.href) ? `../${info.href}` : '#';
+  const href          = (info.href) ? `https://mkoichiro.github.io/memorarium/${info.href}` : '#';
   const artTitile     = info.title.plane,
         date          = info.date,
         detail        = info.detail.plane;
