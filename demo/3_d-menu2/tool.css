@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+:root {
+  --enlarged-init-w: 60rem;
+  --enlarged-init-h: 24rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --enlarged-init-w: 60rem;
+    --enlarged-init-h: 24rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --enlarged-init-w: 55rem;
+    --enlarged-init-h: 28rem;
+  }
+}

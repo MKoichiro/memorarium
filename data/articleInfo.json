@@ -1,0 +1,408 @@
+{
+  "dictionaries": {
+    "langDicts": [
+      { "id" : 0, "lang" : "Others"    , "abbreviation" : "others", "iconClassList" : "fa-solid  fa-fish-fins" },
+      { "id" : 1, "lang" : "HTML"      , "abbreviation" : "html"  , "iconClassList" : "fa-brands fa-html5"     },
+      { "id" : 2, "lang" : "CSS"       , "abbreviation" : "css"   , "iconClassList" : "fa-brands fa-css3-alt"  },
+      { "id" : 3, "lang" : "JavaScript", "abbreviation" : "js"    , "iconClassList" : "fa-brands fa-js"        },
+      { "id" : 4, "lang" : "PHP"       , "abbreviation" : "php"   , "iconClassList" : "fa-brands fa-php"       }
+    ],
+    "groupDicts": [
+      { "id" :   0, "name" : "Others"     },
+      { "id" :   1, "name" : "HTML"       },
+      { "id" :   2, "name" : "CSS"        },
+      { "id" :   3, "name" : "JavaScript" },
+      { "id" :   4, "name" : "PHP"        },
+
+      { "id" : 100, "name" : "ドロワーメニュー" },
+      { "id" : 101, "name" : "カルーセルAPI"    }
+
+    ],
+
+    "typeDicts": [
+      { "id" : 0, "type" : "index" },
+      { "id" : 1, "type" : "article" },
+      { "id" : 2, "type" : null },
+      { "id" : 3, "type" : null },
+      { "id" : 4, "type" : null }
+    ],
+    "forthDicts": [
+      { "id" : 0, "key" : null },
+      { "id" : 1, "key" : null },
+      { "id" : 2, "key" : null },
+      { "id" : 3, "key" : null },
+      { "id" : 4, "key" : null }
+    ]
+  },
+  
+  "articleInfo": [
+    {
+      "id"       : 0,
+      "href"     : "html/new.html",
+      "groupIds" : [],
+      "langId"   : 0,
+      "title"    : {
+        "HTML"  : "<mark class=\"simple-1\">ひな型ページ. 記事タイトルをここに記載する. </mark>",
+        "plane" : "ひな型ページ. 記事タイトルをここに記載する. "
+      },
+      "detail"   : {
+        "HTML"  : "このwebサイトにおける記事の書き方を説明するページ。このページの全部または、一部をコピーして新規作成すると良い。",
+        "plane" : "このwebサイトにおける記事の書き方を説明するページ。このページの全部または、一部をコピーして新規作成すると良い。"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-11-29"
+    },
+    {
+      "id"       : 1,
+      "href"     : "html/1_d-menu.html",
+      "groupIds" : [],
+      "langId"   : 1,
+      "title"    : {
+        "HTML"  : "<mark class=\"simple-1\">展開中はスクロールを禁止するドロワーメニュー</mark>",
+        "plane" : "展開中はスクロールを禁止するドロワーメニュー"
+      },
+      "detail"   : {
+        "HTML"  : "展開中は本文のスクロールを禁止するドロワーメニューの記述方法を解説。",
+        "plane" : "展開中は本文のスクロールを禁止するドロワーメニューの記述方法を解説。"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-12-11"
+    },
+    {
+      "id"       : 2,
+      "href"     : "html/2_modal.html",
+      "groupIds" : [],
+      "langId"   : 3,
+      "title"    : {
+        "HTML"  : "<mark class=\"simple-1\">展開・最小化・移動・リサイズ可能なモーダルウィンドウ</mark>",
+        "plane" : "展開・最小化・移動・リサイズ可能なモーダルウィンドウ"
+      },
+      "detail"   : {
+        "HTML"  : "展開・最小化・移動・リサイズが可能な汎用的に使えそうなモーダルウィンドウを作ったときの備忘録。今回は素のJavaScriptでモーダルウィンドウを作って、ついでにダークモードの設定を手動で切り替えらるようにしてみた。",
+        "plane" : "展開・最小化・移動・リサイズが可能な汎用的に使えそうなモーダルウィンドウを作ったときの備忘録。今回は素のJavaScriptでモーダルウィンドウを作って、ついでにダークモードの設定を手動で切り替えらるようにしてみた。"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-12-18"
+    },
+    {
+      "id"       : 3,
+      "href"     : "html/3_d-menu2.html",
+      "groupIds" : [],
+      "langId"   : 3,
+      "title"    : {
+        "HTML"  : "<mark class=\"simple-1\">スクロールに追従するサイドメニュー</mark>",
+        "plane" : "スクロールに追従するサイドメニュー"
+      },
+      "detail"   : {
+        "HTML"  : "スクロールに追従するサイドメニューを書いた。また、ヘッダーやフッターのスクロール中にはスクロール量に合わせて縦方向に伸び縮みさせてみた。",
+        "plane" : "スクロールに追従するサイドメニューを書いた。また、ヘッダーやフッターのスクロール中にはスクロール量に合わせて縦方向に伸び縮みさせてみた。"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-12-26"
+    },
+    {
+      "id"       : 4,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : 2,
+      "title"    : {
+        "HTML"  : "[CSS] テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4",
+        "plane" : "[CSS] テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4テスト用4"
+      },
+      "detail"   : {
+        "HTML"  : "ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4",
+        "plane" : "ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4ダミーテキスト4"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-11-29"
+    },
+    {
+      "id"       : 5,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : 3,
+      "title"    : {
+        "HTML"  : "[JavaScript] テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5",
+        "plane" : "[JavaScript] テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5テスト用5"
+      },
+      "detail"   : {
+        "HTML"  : "ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5",
+        "plane" : "ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5ダミーテキスト5"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-11-29"
+    },
+    {
+      "id"       : 6,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : 1,
+      "title"    : {
+        "HTML"  : "[HTML] テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6",
+        "plane" : "[HTML] テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6テスト用6"
+      },
+      "detail"   : {
+        "HTML"  : "ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6",
+        "plane" : "ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6ダミーテキスト6"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-11-29"
+    },
+    {
+      "id"       : 7,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : 2,
+      "title"    : {
+        "HTML"  : "[CSS] テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7",
+        "plane" : "[CSS] テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7テスト用7"
+      },
+      "detail"   : {
+        "HTML"  : "ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7",
+        "plane" : "ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7ダミーテキスト7"
+      },
+      "img"      : "../art-img/.png",
+      "date"     : "2023-11-29"
+    },
+    {
+      "id"       : 8,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 9,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 10,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 11,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 12,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 13,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 14,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 15,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 16,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 17,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 18,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 19,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 20,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 21,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    },
+    {
+      "id"       : 22,
+      "href"     : null,
+      "groupIds" : [],
+      "langId"   : null,
+      "title"    : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "detail"   : {
+        "HTML"  : null,
+        "plane" : null
+      },
+      "img"      : "../art-img/.png",
+      "date"     : null
+    }
+  ]
+}

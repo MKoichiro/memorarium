@@ -1,0 +1,74 @@
+'use strict';
+
+// カラーセットを決めておく /////////////////////////////////////////////////////////////////////////
+  const colorSets = {
+    normal: {
+      '--color-header-title': '#666',
+      '--color-sec-titles':   '#666',
+      '--color-footer-title': '#666',
+      '--color-other-char':   '#666',
+      '--bg-color-body':      '#eee',
+      '--bg-color-header':    '#ddd',
+      '--bg-color-footer':    '#ddd',
+    
+      '--bg-color-modal-bar':  'rgba(  0   0   0 /  .50)',
+      '--bg-color-modal-body': 'rgba(250 250 250 /  .50)',
+      '--color-modal-bar':     'rgba(250 250 250 / 1.00)',
+      '--color-modal-body':    'rgba(100 100 100 / 1.00)',
+      '--color-modal-shadow':  'rgba(  0   0   0 /  .15)',
+    },
+    dark: {
+      '--color-header-title': '#a3a3a3',
+      '--color-sec-titles':   '#a3a3a3',
+      '--color-footer-title': '#a3a3a3',
+      '--color-other-char':   '#a3a3a3',
+      '--bg-color-body':      '#282828',
+      '--bg-color-header':    '#343434',
+      '--bg-color-footer':    '#343434',
+  
+      '--bg-color-modal-bar':  'rgba(  0   0   0 /  .75)',
+      '--bg-color-modal-body': 'rgba(120 120 120 /  .50)',
+      '--color-modal-bar':     'rgba(200 200 200 / 1.00)',
+      '--color-modal-body':    'rgba( 28  28  28 / 1.00)',
+      '--color-modal-shadow':  'rgba(  0   0   0 /  .50)',
+    },
+  }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 要素取得 /////////////////////////////////////////////////////////////////////////////////////////
+  const changeThemeRadioBtns = document.querySelectorAll('#change-theme input')
+  const radioNormal = document.querySelector('#change-theme input[value="normal"]'),
+        radioDark   = document.querySelector('#change-theme input[value="dark"]');
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ハンドラー定義部分 ///////////////////////////////////////////////////////////////////////////////
+  // テーマ変更を実行する関数
+  const changeTheme = () => {
+    changeThemeRadioBtns.forEach(radio => {
+      // checked のついた radio に当たったら
+      if (radio.checked) {
+        // radio.value で カラーセット(object) を選択。配列化してからforEach内で各css変数を上書き
+        const colorSet = Object.entries(colorSets[radio.value]);
+        colorSet.forEach(colorData => {
+          const cssVariable = colorData[0]; // '--color-header-title' etc...
+          const colorName   = colorData[1]; // '#666' etc...
+          document.documentElement.style.setProperty(cssVariable, colorName);
+        });
+      }
+    });
+  }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ブラウザの設定に応じて、radioボタンの初期値を決める //////////////////////////////////////////////
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){
+    radioDark.checked = true;
+  } else {
+    radioNormal.checked = true;
+  }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 2つのラジオボタンに変更があったら、changeTheme()を実行 ///////////////////////////////////////////
+  changeThemeRadioBtns.forEach(radio => {
+    radio.addEventListener('input', changeTheme);
+  });
+/////////////////////////////////////////////////////////////////////////////////////////////////////

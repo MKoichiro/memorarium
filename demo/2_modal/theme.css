@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* normal テーマのカラーセット */
+:root {
+  --color-header-title: #666;
+  --color-sec-titles:   #666;
+  --color-footer-title: #666;
+  --color-other-char:   #666;
+  --bg-color-body:      #eee;
+  --bg-color-header:    #ddd;
+  --bg-color-footer:    #ddd;
+
+  --bg-color-modal-bar:  rgba(  0   0   0 /  .50);
+  --bg-color-modal-body: rgba(250 250 250 /  .50);
+  --color-modal-bar:     rgba(250 250 250 / 1.00);
+  --color-modal-body:    rgba(100 100 100 / 1.00);
+  --color-modal-shadow:  rgba(  0   0   0 /  .15);
+}
+
+/* 今回は以下のようにざっくり指定しておく */
+body {
+  color: var(--color-other-char);
+  background: var(--bg-color-body);
+}
+header { background: var(--bg-color-header) }
+footer { background: var(--bg-color-footer) }
+.header-heading { color: var(--color-header-title) }
+.footer-heading { color: var(--color-footer-title) }
+.section-title  { color: var(--color-sec-titles)   }
+
+/* @media (prefers-color-scheme: dark) {}
+   使うとブラウザの設定がダークモードの時のスタイルをあてることができる  */
+@media (prefers-color-scheme: dark) {
+  /* dark テーマのカラーセット */
+  :root {
+    --color-header-title: #a3a3a3;
+    --color-sec-titles:   #a3a3a3;
+    --color-footer-title: #a3a3a3;
+    --color-other-char:   #a3a3a3;
+    --bg-color-body:      #282828;
+    --bg-color-header:    #343434;
+    --bg-color-footer:    #343434;
+
+    --bg-color-modal-bar:  rgba(  0   0   0 /  .75);
+    --bg-color-modal-body: rgba(150 150 150 /  .50);
+    --color-modal-bar:     rgba(200 200 200 / 1.00);
+    --color-modal-body:    rgba( 28  28  28 / 1.00);
+    --color-modal-shadow:  rgba(  0   0   0 /  .50);
+  }
+}

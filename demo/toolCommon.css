@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+
+/* 複数回登場する、またはmain.jsから取得したいものはここで指定 */
+:root {
+  --minimized-modal-diameter: 5rem;
+  --enlarge-duration: 750ms;
+  --modal-offset: 1.6rem;
+  --enlarged-init-w: 60rem;
+  --enlarged-init-h: 20rem;
+}
+
+/* --- div.modal ------------------------------------------------------------------- */
+.modal {
+  /* 画面に固定して展開時の初期座標を設定 */
+  position: fixed;
+  position: -webkit-fixed;
+    top:  var(--modal-offset);
+    left: var(--modal-offset);
+    z-index: 100;
+
+  /* 展開時の width/height などを指定 */
+  width:  var(--enlarged-init-w);
+  height: var(--enlarged-init-h);
+  border-radius: .8rem;
+
+  /* 縦横両方のリサイズを許可 */
+  resize: both;
+
+  /* その他のスタイル */
+  font-size: 1.4rem;
+  background: var(--bg-color-modal-body);
+  box-shadow: var(--color-modal-shadow) 0px 1px 4px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  user-select: none;
+}
+.modal.minimized {
+  /* 最小化状態の固定座標を指定 */
+  top: calc(100dvh - (var(--modal-offset) + var(--minimized-modal-diameter)));
+  bottom: var(--modal-offset);
+  left:   var(--modal-offset);
+
+  /* 最小化状態の半径などを指定 */
+  width:  var(--minimized-modal-diameter);
+  height: var(--minimized-modal-diameter);
+  border-radius: 50%;
+
+  /* 最小化状態ではリサイズを無効化 */
+  resize: none;
+}
+/* --------------------------------------------------------------------------------- */
+
+/* --- .modal-bar: modalのタイトル・最小化・移動可能アイコン部分 ------------------- */
+.modal-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  line-height: 4rem;
+  padding-left: .8rem;
+  background: var(--bg-color-modal-bar);
+  color: var(--color-modal-bar);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.modal-title { font-weight: bold }
+/* 最小化状態では非表示に */
+.minimized .modal-bar {
+  display: none;
+}
+/* --------------------------------------------------------------------------------- */
+
+/* --- (.modal-bar >) .bar-btns: 最小化・移動可能アイコン -------------------------- */
+.modal-bar .bar-btns {
+  height: 100%;
+  display: flex;
+  gap: .8rem;
+}
+#minimize-btn,
+.movable-btn {
+  width: 4rem;
+  height: 100%;
+  color: var(--color-modal-bar);
+  font-size: 1.8rem;
+}
+#minimize-btn i,
+.movable-btn i {
+  line-height: 4rem;
+}
+/* 表示・非表示の切り替えは親の modal-bar 全体で行うので不要 */
+/* --------------------------------------------------------------------------------- */
+
+
+/* --- button#enlarge-btn: 展開アイコン(設定マーク) -------------------------------- */
+#enlarge-btn {
+  /* 展開時には非表示にしておく */
+  width: 0;
+  height: 0;
+  opacity: 0;
+  display: none;
+}
+/* 最小化状態で表示する */
+.minimized #enlarge-btn {
+  /* width/ height は親(div.modal)を継承 */
+  display: block; 
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  animation: enlargeBtnAnime calc(var(--enlarge-duration) * 2);
+
+  /* その他のスタイル */
+  color: var(--color-modal-body);
+  font-size: 1.8rem;
+}
+.minimized #enlarge-btn {
+  line-height: var(--minimized-modal-diameter);
+}
+/* いろいろ試したが、なぜかdisplay:none以外で
+   領域ごと非表示にすることはできなかったので
+   仕方なくkeyframesを定義 */
+@keyframes enlargeBtnAnime {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: block;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+/* --------------------------------------------------------------------------------- */
+
+
+/* --- .modal-contents-container: モーダルの中身 ------------------------------------ */
+.modal-contents-container {
+  margin: .8rem;
+  display: block;
+}
+/* 最小化状態では非表示に */
+.minimized .modal-contents-container { display: none }
+/* --------------------------------------------------------------------------------- */
+
+
+/* --- 以下、.modal-contents-container の中はご自由に。 ---------------------------- */
+.modal-contents-container * {
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック',
+   sans-serif;
+   font-size: 1.6rem;
+}
+.modal-contents-container fieldset {
+  margin-top: 1.6rem;
+  padding: 0 .8rem 0 1.6rem;
+  border-top: var(--color-modal-body) solid .15rem;
+  color: var(--color-modal-body);
+}
+.modal-contents-container legend {
+  padding: 0 .8rem;
+  font-weight: bold;
+}
+.modal-contents-container label {
+  font-weight: bold;
+  letter-spacing: .15rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+}
+.modal-contents-container input {
+  display: block;
+  cursor: pointer;
+}
+
+/* フォーム内のボタン共通 */
+.modal-contents-container button {
+  padding: 0 1.6rem;
+  border: var(--color-modal-body) solid .15rem;
+  border-radius: .5rem;
+  background: #eee;
+}
+.modal-contents-container button:hover {
+  background: #ccc;
+}
+.modal-contents-container button:active {
+  background: #ddd;
+}
+
+/* radio */
+.radio-field {
+  display: flex;
+  gap: 1.6rem;
+}
+
+/* slider */
+.slider-field {
+  display: flex;
+  gap: 1.6rem;
+}
+.slider-field label {
+  display: flex;
+  gap: 1.6rem;
+  flex: 1;
+}
+.slider-field input {
+  flex: 1;
+}
+.slider-field button {
+  margin-left: auto;
+}
+.slider-field span {
+  width: 3.5rem;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+/* --- 最低限のメディアクエリ------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --enlarged-init-w: 60rem;
+    --enlarged-init-h: 17rem;
+  }
+}
+@media (max-width: 600px) {
+}
+/* --------------------------------------------------------------------------------- */
