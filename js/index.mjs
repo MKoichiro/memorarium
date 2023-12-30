@@ -92,7 +92,7 @@ langArr.forEach((lang, i) => {
 
   artInfoByLang.forEach(art => {
     const li = document.createElement('li');
-    li.innerHTML = `<a href="../${ art.href }">
+    li.innerHTML = `<a href="https://mkoichiro.github.io/memorarium/${ art.href }">
                       <p> ${ art.title.plane } </p>
                       <time datetime="${art.date}" class="date"> ${ art.date.replaceAll('-', '.') } </time>
                     </a>`;
@@ -193,7 +193,7 @@ carouselArtIds.forEach(id => {
   liSlide.innerHTML = `<article>
 
                          <div class="text-contents">
-                           <a href="../${ artInfo.href }" 
+                           <a href="https://mkoichiro.github.io/memorarium/${ artInfo.href }" 
                               class="${ langInfo.lang } art-link">
                               <h3 class="art-title">
                                   <i class="${ langInfo.iconClassList }"></i>
